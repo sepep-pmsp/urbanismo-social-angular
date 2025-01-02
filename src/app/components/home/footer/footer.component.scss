@@ -1,0 +1,147 @@
+.footer__row__container {
+    background-color: #e34358;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+}
+._img_search {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.img_footer_1 {
+    width: 29rem;
+}
+
+.container_img{
+    padding: 0 22rem 0 0;
+}
+
+.busca_footer {
+    border: 1px solid #e34358;
+    border-radius: 5rem;
+    width: 19rem;
+    height: 4rem;
+
+    &::placeholder {
+        color: #a0a0a0;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}
+
+.conatiner__txt {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.conatiner_txt {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 45rem;
+    height: 24rem;
+}
+
+.list_principal,
+.list_secundary {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0.2em;
+    list-style-type: none;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.img-prefeitura {
+    width: 34rem;
+}
+
+.endress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin: 0 0 0 8rem;
+}
+
+.container_adress {
+    color: white;
+    padding: 0.1em;
+}
+
+.Newsletter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.newsletter_p {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.newsletter_footer {
+    border: none;
+    border-radius: 5rem;
+    width: 29rem;
+    height: 4.5rem;
+}
+.newsletter_footer_button {
+    border: none;
+    border-radius: 5rem;
+    height: 4.5rem;
+    width: 17rem;
+    font-size: 29px;
+    background-color: white;
+    color: #e34358;
+    font-weight: bold;
+}
+
+.container___news__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.container_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.rede {
+    padding: 0 4em 0 0;
+    width: 11rem;
+}
+
+.social {
+    padding: 0.5em;
+}
+
+a{
+    color:white;
+}
