@@ -1,1 +1,6 @@
-<p>header works!</p>
+<div class="header__container">
+    <div class="banner"></div>
+    <div class="header__logo" *ngFor="let logos of header_logo">
+        <img class="headerlogo" [src]="logos.logo_header" alt="">
+    </div>
+</div>
