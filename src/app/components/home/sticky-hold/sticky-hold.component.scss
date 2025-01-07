@@ -1,0 +1,29 @@
+.__sticky__ {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+    &.home-sticky {
+      top: 6rem; // Alinha abaixo do header na Home Page
+    }
+  
+    &.top-sticky {
+      top: 0; // Fica no topo em outras páginas
+    }
+  
+    .__sticky__content {
+      width: 22rem;
+      height: 11rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+  
