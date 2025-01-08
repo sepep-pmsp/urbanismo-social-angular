@@ -58,14 +58,18 @@
 
     ._txt_list {
       opacity: 0;
-      font-size: 14px; // Reduz o tamanho da fonte para telas menores
+      font-size: 30px; // Reduz o tamanho da fonte para telas menores
       transition: opacity 0.4s ease-in-out;
+      font-weight: bold;
+      & a{
+        color: white;
+      }
     }
   }
 
   ._list_navigation_:hover {
-    width: 9rem;
-    height: 3rem;
+    width: 14rem;
+    height: 3.22rem;
     border-radius: 5rem;
     font-size: 1rem;
     overflow: visible;
