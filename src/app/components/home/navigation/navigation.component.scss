@@ -1,0 +1,209 @@
+.__navigation__ {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: fixed;
+  top: 69%;
+  left: 98%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+}
+
+.__list__navigation__ {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  ._list_navigation_ {
+    position: absolute;
+    right: 0;
+    top: calc(var(--index) * 4rem); // Calcula a posição com base no índice
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0;
+    color: white;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+
+    &._s_ {
+      background-color: #f16532;
+      color: white;
+    }
+    &._t_ {
+      background-color: #f9b92b;
+      color: white;
+    }
+    &._e_ {
+      background-color: #db3c51;
+      color: white;
+    }
+    &._n_ {
+      background-color: #2c7b95;
+      color: white;
+    }
+    &._g_ {
+      background-color: #320150;
+      color: white;
+    }
+
+    ._txt_list {
+      opacity: 0;
+      font-size: 30px; // Reduz o tamanho da fonte para telas menores
+      transition: opacity 0.4s ease-in-out;
+      font-weight: bold;
+      & a{
+        color: white;
+      }
+    }
+  }
+
+  ._list_navigation_:hover {
+    width: 14rem;
+    height: 3.22rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+    overflow: visible;
+
+    ._txt_list {
+      opacity: 1;
+      padding: 8px 0 0 0;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .__navigation__{
+    display: none;
+  }
+  .__menu__mobile__ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  ._btn_menu_ {
+    border: solid 1px var(--color-black);
+    width: 8rem;
+    height: 3rem;
+    border-radius: 1rem;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu_list_mobile {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0);  /* Remover cor de fundo */
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .list-mobile {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .list-mobile a {
+    text-decoration: none;
+    color: white;
+    font-size: 2.5rem;
+    display: block;
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  .list-mobile button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    cursor: pointer;
+  }
+
+  ._i_ {
+    background-color: var(--color-quaternary);
+    color: var(--color-primary);
+    font-weight: bold;
+    height: 6rem;
+    padding: 2rem 0 0 0;
+  }
+  ._s_ {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-weight: bold;
+    height: 6rem;
+    padding: 2rem 0 0 0;
+  }
+  ._t_ {
+    background-color: var(--color-tertiary);
+    color: var(--color-primary);
+    font-weight: bold;
+    height: 6rem;
+    padding: 2rem 0 0 0;
+  }
+  ._e_ {
+    background-color: var(--color-quinary);
+    color: var(--color-primary);
+    font-weight: bold;
+    height: 6rem;
+    padding: 2rem 0 0 0;
+  }
+  ._n_ {
+    background-color: var(--color-senary);
+    color: var(--color-primary);
+    font-weight: bold;
+    height: 6rem;
+    padding: 2rem 0 0 0;
+  }
+  ._g_ {
+    background-color: var(--color-denary);
+    color: var(--color-primary);
+    font-weight: bold;
+    height: 6rem;
+    padding: 2rem 0 0 0;
+  }
+  ._exit_ {
+    background-color: var(--color-septenary);
+    color: var(--color-primary);
+    font-weight: bold;
+    height: 6rem;
+    padding: 2rem 0 0 0;
+  }
+}

@@ -1,0 +1,26 @@
+.__sticky__ {
+  position: absolute;
+  top: auto;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &.sticky-active {
+    position: fixed; 
+    top: 0;
+  }
+
+  .__sticky__content {
+    width: 22rem;
+    height: 11rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

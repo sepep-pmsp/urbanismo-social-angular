@@ -1,0 +1,55 @@
+<div class="footer__row__container">
+    <div class="_img_search">
+        <div class="img__0" *ngFor="let imgs of splint_svg">
+            <img class="img_footer_1" [src]="imgs.imgSrc" alt="Logo Urbanismo Social">
+        </div>
+        <div class="search__0">
+            <div id="divBusca">
+                <input type="text" id="txtBusca" class="busca_footer" placeholder="buscar" />
+            </div>
+        </div>
+    </div>
+    <div class="conatiner__txt">
+        <div class="conatiner_txt">
+            <div class="container_principal">
+                <ul class="list_princ" *ngFor="let list1 of list_principal">
+                    <li class="list_principal"><a href="{{ list1.link }}">{{ list1.txt }}</a></li>
+                </ul>
+            </div>
+            <div class="secundary">
+                <ul class="list-seg" *ngFor="let list2 of list_secundary">
+                    <li class="list_secundary">{{ list2.txt2 }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container_img" *ngFor="let img1 of img_prefei">
+            <img class="img-prefeitura" [src]="img1.prefeitura" alt="">
+        </div>
+    </div>
+    <div class="endress" >
+        <div *ngFor="let texto of adresse">
+            <span>
+                <p class="container_adress">{{ texto.adress }}</p>
+            </span>
+            <span>
+                <p class="container_adress">{{ texto.email }}</p>
+            </span>
+            <span>
+                <p class="container_adress">{{ texto.tele }}</p>
+            </span>
+        </div>
+    </div>
+    <div class="container___news__links">
+        <div class="container_links" >
+            <div class="images1" *ngFor="let imagess of img_negativo">
+                <img 
+                [src]="imagess.imgs" 
+                alt="" 
+                [class]="imagess.class" >
+            </div>
+            <div class="imgs_2" *ngFor="let images of links_rede">
+                <img [src]="images.img" [class]="images.class" alt="">
+            </div>
+        </div>
+    </div>
+</div>

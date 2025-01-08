@@ -1,0 +1,71 @@
+<div class="__main__">
+    <div class="__content__" *ngFor="let block of blocks;">
+        <div class="block_ _01">
+            <div class="_block_">
+                <p class="_paragraph_prog_txt">{{ block.title }}</p>
+            </div>
+        </div>
+        <div class="txt_block_ _01">
+            <p class="_paragraph_prog_txt_0">{{ block.text }}</p>
+        </div>
+    </div>
+    <div class="__content__0" *ngFor="let blockss of block;">
+        <div class="block_ _02">
+            <div class="_block_ _1">
+                <p class="_paragraph_prog_txt">{{ blockss.title }}</p>
+            </div>
+        </div>
+        <div class="txt_block_ _02">
+            <p class="_paragraph_prog_txt_0">{{ blockss.text }}</p>
+        </div>
+    </div>
+    <div class="__main_img_territories__">
+        <div class="img_sp">
+            <img src="assets/images/territorios_sp.svg" alt="territories">
+        </div>
+        <div class="territorios_sp">
+            <div class="tooltip-container">
+                <button class="btn_territory">
+                    <span class="txt">os territórios</span>
+                </button>
+                <div class="tooltip top-left">
+                    <img class="img_territory" [src]="images_territories[0].img_orange"
+                        alt="{{ images_territories[0].territorio_orange }}">
+                </div>
+                <div class="tooltip top-right">
+                    <img class="img_territory" [src]="images_territories[1].img_pink"
+                        alt="{{ images_territories[1].territorio_pink }}">
+                </div>
+                <div class="tooltip bottom-left">
+                    <img class="img_territory" [src]="images_territories[2].img_blue"
+                        alt="{{ images_territories[2].territorio_blue }}">
+                </div>
+                <div class="tooltip bottom-right">
+                    <img class="img_territory" [src]="images_territories[3].img_yellow"
+                        alt="{{ images_territories[3].territorio_yellow }}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="__main_parceiros__">
+        <div class="_txt_">
+            <span>
+                parceiros
+            </span>
+        </div>
+        <div class="_carousel_parceiros">
+            <div class="slider">
+                <div class="slide-track">
+                    <div *ngFor="let img of carouselImages" class="slide">
+                        <img class="img-slider" [src]="img.src" [alt]="img.alt" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="_btn_parceiros_">
+            <a href="">
+                <button class="btn_parceiros">veja nossos parceiros</button>
+            </a>
+        </div>
+    </div>
+</div>
