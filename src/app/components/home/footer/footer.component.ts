@@ -16,19 +16,19 @@ export class FooterComponent {
   ];
 
   list_principal=[
-    {txt : 'início', link: ''},
-    {txt : 'sobre nós',},
-    {txt : 'territórios',},
-    {txt : 'eventos',},
-    {txt : 'acervo',},
+    {txt : 'início', link: '/'},
+    {txt : 'sobre nós', link: '/sobre'},
+    {txt : 'territórios', link: ''},
+    {txt : 'eventos', link: ''},
+    {txt : 'acervo', link: ''},
   ];
 
   list_secundary = [
-    {txt2 : 'notícias'},
-    {txt2 : 'governaça'},
-    {txt2 : 'parceiros'},
-    {txt2 : 'marcos institucionais'},
-    {txt2 : 'órgãos colegiados'},
+    {txt2 : 'notícias', link: ''},
+    {txt2 : 'governaça', link: ''},
+    {txt2 : 'parceiros', link: ''},
+    {txt2 : 'marcos institucionais', link: ''},
+    {txt2 : 'órgãos colegiados', link: ''},
   ]
 
   adresse = [

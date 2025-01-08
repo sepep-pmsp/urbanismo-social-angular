@@ -1,20 +1,36 @@
 <div class="__navigation__">
-    <ul class="__list__navigation__">
-      <li class="_list_navigation_ _s_" style="--index: 0;">
-        <p class="_txt_list"><a class="_s_" href="#">sobre</a></p>
-      </li>
-      <li class="_list_navigation_ _t_" style="--index: 1;">
-        <p class="_txt_list"><a class="_t_" href="#">territórios</a></p>
-      </li>
-      <li class="_list_navigation_ _e_" style="--index: 2;">
-        <p class="_txt_list"><a class="_e_" href="#">eventos</a></p>
-      </li>
-      <li class="_list_navigation_ _n_" style="--index: 3;">
-        <p class="_txt_list"><a class="_n_" href="#">notícias</a></p>
-      </li>
-      <li class="_list_navigation_ _g_" style="--index: 4;">
-        <p class="_txt_list"><a class="_g_" href="#">governança</a></p>
-      </li>
+  <ul class="__list__navigation__">
+    <li class="_list_navigation_ _s_" style="--index: 0;">
+      <p class="_txt_list"><a class="_s_" href="#">sobre</a></p>
+    </li>
+    <li class="_list_navigation_ _t_" style="--index: 1;">
+      <p class="_txt_list"><a class="_t_" href="#">territórios</a></p>
+    </li>
+    <li class="_list_navigation_ _e_" style="--index: 2;">
+      <p class="_txt_list"><a class="_e_" href="#">eventos</a></p>
+    </li>
+    <li class="_list_navigation_ _n_" style="--index: 3;">
+      <p class="_txt_list"><a class="_n_" href="#">notícias</a></p>
+    </li>
+    <li class="_list_navigation_ _g_" style="--index: 4;">
+      <p class="_txt_list"><a class="_g_" href="#">governança</a></p>
+    </li>
+  </ul>
+</div>
+<div class="__menu__mobile__" *ngIf="isMobile">
+  <button class="_btn_menu_" (click)="toggleMenu()">menu</button>
+  <div class="menu_list_mobile" *ngIf="menuOpen">
+    <ul class="mobile-menu">
+      <li class="list-mobile _i_"><a href="#">Início</a></li>
+      <li class="list-mobile _s_"><a href="#">Sobre</a></li>
+      <li class="list-mobile _t_"><a href="#">Territórios</a></li>
+      <li class="list-mobile _e_"><a href="#">Eventos</a></li>
+      <li class="list-mobile _n_"><a href="#">Notícias</a></li>
+      <li class="list-mobile _g_"><a href="#">Governança</a></li>
+      <li class="list-mobile _exit_" (click)="toggleMenu()">Sair</li>
     </ul>
   </div>
-  
+</div>
+
+
+
