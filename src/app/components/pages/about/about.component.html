@@ -1,1 +1,67 @@
-<p>about works!</p>
+<div class="__about__">
+    <div>
+        <app-sticky-hold [isHomePage]="false"></app-sticky-hold>
+    </div>
+    <div class="__about_us__">
+        <div class="letreiro">
+            <div class="linha"></div>
+            <div class="txt_letreiro">
+                <div class="txt_about">
+                    <ng-container *ngFor="let i of [].constructor(repeatCount); let index = index">
+                        <div class="txt_item">
+                            <p class="__txt-0__">sobre nós</p>
+                            <div class="point"></div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="linha"></div>
+        </div>
+
+        <div class="__apresentacao__">
+            <div class="__apresentacao__content" *ngFor="let item of apresentacao">
+                <div class="__apresentacao__content__paragrafo_1">
+                    <p>{{ item.txt_1 }}</p>
+                </div>
+                <div class="__apresentacao__content__paragrafo_2">
+                    <p>{{ item.txt_2 }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="__eixos__">
+            <div class="__eixos__content" *ngFor="let item of eixos">
+                <div class="__eixos__content__title">
+                    <p class="__eixos__title">{{ item.title }}</p>
+                </div>
+                <div class="_eixos_img_">
+                    <div class="img_content">
+                        <img src="{{ item.img }}" alt="{{ item.alt }}">
+                    </div>
+                    <div class="txt_content">
+                        <ng-container *ngFor="let subItem of item.list">
+                            <p class="txt_3">{{ subItem.txt }}</p>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="__video__">
+            <div class="__video__content" *ngFor="let item of video">
+                <div class="__video__content__title">
+                    <p class="__video__title">{{ item.title }}</p>
+                </div>
+                <div class="_video_institucional_">
+                    <div class="video_content">
+                        <iframe 
+                            [src]="item.video" 
+                            width="100%" height="100%" 
+                            frameborder="0" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
