@@ -1,9 +1,10 @@
 import { NgClass } from '@angular/common';
 import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sticky-hold',
-  imports: [NgClass],
+  imports: [NgClass, RouterModule],
   templateUrl: './sticky-hold.component.html',
   styleUrl: './sticky-hold.component.scss'
 })

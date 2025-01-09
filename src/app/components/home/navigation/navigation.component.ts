@@ -1,9 +1,10 @@
 import { NgIf } from '@angular/common';
 import { Component, HostListener, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
-  imports: [NgIf],
+  imports: [NgIf, RouterModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
 })
