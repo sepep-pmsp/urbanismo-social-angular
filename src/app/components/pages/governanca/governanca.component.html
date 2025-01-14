@@ -29,7 +29,7 @@
                 <ul class="law-list">
                     <li *ngFor="let law of content.laws; let i = index" [class]="'law-item item' + (i + 1)">
                         <div class="img-item">
-                            <img class="img-item" src="{{ law.img_law }}" alt="">
+                            <img [src]="law.img_law" alt="Imagem da lei {{ law.title }}" />
                         </div>
                         <div class="law-content-txt">
                             <h3 class="law-title">{{ law.title }}</h3>
@@ -41,8 +41,7 @@
             <section *ngIf="content.section === 3" class="section section-3">
                 <h3 class="section-title_3">{{ content.title_h3 }}</h3>
                 <div class="images">
-                    <img *ngFor="let image of content.images" class="{{ image.class }}" [src]="image.src"
-                        [alt]="image.alt" />
+                    <img *ngFor="let image of content.images" class="{{ image.class }}" [src]="image.src" [alt]="image.alt" />
                 </div>
             </section>
             <section *ngIf="content.section === 4" class="section section-4">
@@ -52,7 +51,9 @@
                 <div class="section-institucional">
                     <div class="institutional-governance">
                         <div class="institucional_txt">
-                            <div class="curva"></div>
+                            <div class="curva curva-institucional">
+                                <img [src]="content.img_curv_com" alt="Curva Institucional" />
+                            </div>
                             <h5 class="institucional-title">{{ content.txt_title2_01 }}</h5>
                         </div>
                         <div class="list-institucional">
@@ -66,7 +67,7 @@
                     </div>
                     <div class="coordination">
                         <div class="coordination-title">
-                            <h5 class="institucional-title">{{ content.txt_title2_02 }}</h5>
+                            <h5 class="institucional-title cooperation-title-line">{{ content.txt_title2_02 }}</h5>
                         </div>
                         <div class="box-coordination-color-1">
                             <div class="box-coordination-color-2">
@@ -85,23 +86,23 @@
                     </div>
                     <div class="cooperation">
                         <div class="cooperation-title">
-                            <div class="curva"></div>
+                            <div class="curva">
+                                <img [src]="content.img_curv_coop" alt="Curva Cooperação" />
+                            </div>
                             <h4 class="institucional-title">{{ content.txt_list_1 }}</h4>
                         </div>
-                        <div class="cooperation-txt">
-                            <ul class="cooperation-list">
-                                <li *ngFor="let coop of content.list_2" class="cooperation-item">{{ coop }}</li>
-                            </ul>
-                        </div>
+                        <ul class="cooperation-list">
+                            <li *ngFor="let coop of content.list_2" class="cooperation-item">{{ coop }}</li>
+                        </ul>
                     </div>
                     <div class="partners">
                         <div class="partners-title">
-                            <div class="curva"></div>
+                            <div class="curva">
+                                <img [src]="content.img_curv_par" alt="Curva Parceiros" />
+                            </div>
                             <h4 class="institucional-title">{{ content.title_4 }}</h4>
                         </div>
-                        <div class="partners-txt">
-                            <p class="partners-text">{{ content.txt_title_4 }}</p>
-                        </div>
+                        <p class="partners-text">{{ content.txt_title_4 }}</p>
                     </div>
                 </div>
             </section>

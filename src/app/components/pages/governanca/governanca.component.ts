@@ -60,6 +60,7 @@ export class GovernancaComponent {
     {
       section: 4,
       txt_list_0: 'governança institucional',
+      img_curv_com: 'assets/images/UrbanismoSocial_ElementoApoio_04_Amarelo.svg',
       txt_title2_01: 'Comissão Intersecretarial do Programa de Urbanismo Social',
       list_0: [
         'SMC', 'SMS', 'SME', 'SEME', 'SMSU', 'SVMA', 'SMSUB', 'SMIT',
@@ -72,12 +73,14 @@ export class GovernancaComponent {
       box_txt_1: '(Institucional)',
       content_box_txt_2: 'SMUL',
       box_txt_2: '(Técnica)',
+      img_curv_coop: 'assets/images/UrbanismoSocial_ElementoApoio_04_Laranja.svg',
       txt_list_1: 'Cooperação',
       list_2: [
         'Comunitas', 'Fundação Tide Setúbal', 'Instituto Alana', 'Insper',
         'Diagonal/Fundação Tellescom', 'Instituto Baccarelli', 'CAU/BR',
         'Pacto Pelas Cidades Justas', 'C40'
       ],
+      img_curv_par: 'assets/images/UrbanismoSocial_ElementoApoio_04_Azul.svg',
       title_4: 'Parceiros Institucionais',
       txt_title_4: 'Ade Sampa; SP Obras; SP Urbanismo; SP Cine; SP Regula; SP Parcerias; CET; Fundação Paulistana'
     },
