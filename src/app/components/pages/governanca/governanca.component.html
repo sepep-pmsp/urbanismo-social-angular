@@ -1,0 +1,114 @@
+<div class="__governanca_container__">
+    <div class="sticky-container">
+        <app-sticky-hold [isHomePage]="false"></app-sticky-hold>
+    </div>
+    <div class="__governance__">
+        <div class="letreiro">
+            <div class="linha"></div>
+            <div class="txt_letreiro">
+                <div class="txt_governance">
+                    <ng-container *ngFor="let i of [].constructor(repeatCount); let index = index">
+                        <div class="txt_item">
+                            <p class="__txt-0__">governança</p>
+                            <div class="point"></div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="linha"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div *ngFor="let content of contents" class="section-container">
+            <section *ngIf="content.section === 1" class="section section-1">
+                <h1 class="section-title_0">{{ content.title }}</h1>
+                <p class="section-content">{{ content.content }}</p>
+            </section>
+            <section *ngIf="content.section === 2" class="section section-2">
+                <h2 class="section-title_1">{{ content.title_h2 }}</h2>
+                <ul class="law-list">
+                    <li *ngFor="let law of content.laws; let i = index" [class]="'law-item item' + (i + 1)">
+                        <div class="img-item">
+                            <img [src]="law.img_law" alt="Imagem da lei {{ law.title }}" />
+                        </div>
+                        <div class="law-content-txt">
+                            <h3 class="law-title">{{ law.title }}</h3>
+                            <p class="law-text">{{ law.text }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section *ngIf="content.section === 3" class="section section-3">
+                <h3 class="section-title_3">{{ content.title_h3 }}</h3>
+                <div class="images">
+                    <img *ngFor="let image of content.images" class="{{ image.class }}" [src]="image.src" [alt]="image.alt" />
+                </div>
+            </section>
+            <section *ngIf="content.section === 4" class="section section-4">
+                <div class="title-institucional">
+                    <h4 class="section-title_4">{{ content.txt_list_0 }}</h4>
+                </div>
+                <div class="section-institucional">
+                    <div class="institutional-governance">
+                        <div class="institucional_txt">
+                            <div class="curva curva-institucional">
+                                <img [src]="content.img_curv_com" alt="Curva Institucional" />
+                            </div>
+                            <h5 class="institucional-title">{{ content.txt_title2_01 }}</h5>
+                        </div>
+                        <div class="list-institucional">
+                            <ul class="institutional-list_1">
+                                <li *ngFor="let item of content.list_0" class="institutional-item">{{ item }}</li>
+                            </ul>
+                            <ul class="institutional-list_2">
+                                <li *ngFor="let item of content.list_1" class="institutional-item">{{ item }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="coordination">
+                        <div class="coordination-title">
+                            <h5 class="institucional-title cooperation-title-line">{{ content.txt_title2_02 }}</h5>
+                        </div>
+                        <div class="box-coordination-color-1">
+                            <div class="box-coordination-color-2">
+                                <div class="coordination-txt">
+                                    <div class="coordination-txt-1">
+                                        <p class="coordination-text_1">{{ content.content_box_txt_1 }}</p>
+                                        <p class="coordination-text_1">{{ content.box_txt_1 }}</p>
+                                    </div>
+                                    <div class="coordination-txt-2">
+                                        <p class="coordination-text_2">{{ content.content_box_txt_2 }}</p>
+                                        <p class="coordination-text_1">{{ content.box_txt_2  }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cooperation">
+                        <div class="cooperation-title">
+                            <div class="curva">
+                                <img [src]="content.img_curv_coop" alt="Curva Cooperação" />
+                            </div>
+                            <h4 class="institucional-title">{{ content.txt_list_1 }}</h4>
+                        </div>
+                        <ul class="cooperation-list">
+                            <li *ngFor="let coop of content.list_2" class="cooperation-item">{{ coop }}</li>
+                        </ul>
+                    </div>
+                    <div class="partners">
+                        <div class="partners-title">
+                            <div class="curva">
+                                <img [src]="content.img_curv_par" alt="Curva Parceiros" />
+                            </div>
+                            <h4 class="institucional-title">{{ content.title_4 }}</h4>
+                        </div>
+                        <p class="partners-text">{{ content.txt_title_4 }}</p>
+                    </div>
+                </div>
+            </section>
+            <section *ngIf="content.section === 5" class="section section-5">
+                <button class="learn-more-button" (click)="learnMore()">{{ content.txt_btn }}</button>
+            </section>
+        </div>
+    </div>
+</div>
