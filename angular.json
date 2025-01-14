@@ -32,7 +32,8 @@
               },
               "src/assets",
               "src/assets/icons",
-              "src/assets/images"
+              "src/assets/images",
+              "src/assets/json"
             ],
             "styles": [
               "src/styles.scss"
