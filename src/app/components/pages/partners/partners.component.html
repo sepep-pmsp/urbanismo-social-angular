@@ -1,1 +1,30 @@
-<p>partners works!</p>
+<div class="sticky-container">
+    <app-sticky-hold [isHomePage]="false"></app-sticky-hold>
+</div>
+<div class="__partners__">
+    <div class="title">
+        <h1 class="title-partners-principal">parceiros</h1>
+    </div>
+    <div class="container_partners">
+        <div *ngFor="let parceiro of parceiros" class="contant-partners">
+            <div class="images">
+                <div class="img-partners">
+                    <img class="img_partners" [src]="parceiro.img_parceiro" [alt]="parceiro.title" />
+                </div>
+            </div>
+            <div class="contant-partners-text">
+                <div class="title-subtitle-partners">
+                    <div class="content-title-partners">
+                        <h2 class="title-partners">{{ parceiro.title }}</h2>
+                    </div>
+                    <div class="content-subtitle-partners">
+                        <h3 class="subtile-partners">{{ parceiro.subtitle }}</h3>
+                    </div>
+                </div>
+                <div class="contant-partners-txt">
+                    <p class="txt-partners">{{ parceiro.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
