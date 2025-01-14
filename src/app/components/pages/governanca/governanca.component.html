@@ -107,7 +107,9 @@
                 </div>
             </section>
             <section *ngIf="content.section === 5" class="section section-5">
-                <button class="learn-more-button" (click)="learnMore()">{{ content.txt_btn }}</button>
+                <a [routerLink]="'/parceiros'">
+                    <button class="learn-more-button" (click)="learnMore()">{{ content.txt_btn }}</button>
+                </a>
             </section>
         </div>
     </div>

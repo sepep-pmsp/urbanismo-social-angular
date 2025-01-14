@@ -1,9 +1,10 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main-content',
-  imports: [NgFor],
+  imports: [NgFor, RouterModule],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
