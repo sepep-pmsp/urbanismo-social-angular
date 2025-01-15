@@ -5,6 +5,7 @@ import { GovernancaComponent } from './components/pages/governanca/governanca.co
 import { PartnersComponent } from './components/pages/partners/partners.component';
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { TerritoriosPageComponent } from './components/pages/territorios/territorios-page/territorios-page.component';
+import { TerritorioPageComponent } from './components/pages/territorio/territorio-page/territorio-page.component';
 
 export const routes: Routes = [
     { path: '' , component: HomePageComponent },
@@ -12,5 +13,6 @@ export const routes: Routes = [
     { path: 'governanca', component: GovernancaComponent },
     { path: 'parceiros', component: PartnersComponent },
     { path: 'territorios', component: TerritoriosPageComponent },
+    { path: 'territorio/:url', component: TerritorioPageComponent },
     { path: '**', pathMatch: 'full', component: NotFoundComponent },
 ];

@@ -26,23 +26,25 @@
         </div>
     </div>
     <div class="images_territorios_">
-        <div class="__img__" *ngFor="let item of images">
-            <div *ngFor="let img of [item.img_pink, item.img_orange, item.img_blue, item.img_yellow]; let i = index" class="_img_and_txt_">
-                <div>
-                    <a [routerLink]="['/territorios']">
-                        <img [src]="img" [alt]="'Imagem ' + (['Pink', 'Orange', 'Blue', 'Yellow'][i])" class="_img_" />
-                    </a>
-                </div>
-                <div class="_txt_content_">
-                    <p class="_txt_territorios">
-                        <a 
-                        class="_txt_territorios" 
-                        [routerLink]="['/territorios']">
-                            {{ [item.txt_pink, item.txt_orange, item.txt_blue, item.txt_yellow][i] }}
-                        </a>
-                    </p>
-                </div>
+        <div *ngFor="let territorio of territorios; let i = index" class="__img__">
+          <div class="_img_and_txt_">
+            <div>
+              <a [routerLink]="['/territorio', territorio.url]">
+                <img
+                  [src]="[images[0].img_pink, images[0].img_orange, images[0].img_blue, images[0].img_yellow][i]"
+                  [alt]="'Imagem do ' + territorio.title"
+                  class="_img_"
+                />
+              </a>
             </div>
+            <div class="_txt_content_">
+              <p class="_txt_territorios">
+                <a [routerLink]="['/territorio', territorio.url]" class="_txt_territorios">
+                  {{ [images[0].txt_pink, images[0].txt_orange, images[0].txt_blue, images[0].txt_yellow][i] }}
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>      
 </div>
