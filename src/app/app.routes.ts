@@ -13,6 +13,6 @@ export const routes: Routes = [
     { path: 'governanca', component: GovernancaComponent },
     { path: 'parceiros', component: PartnersComponent },
     { path: 'territorios', component: TerritoriosPageComponent },
-    { path: 'territorio/:url', component: TerritorioPageComponent },
+    { path: 'territorio/:url', component: TerritorioPageComponent, data: { prerender: false } },
     { path: '**', pathMatch: 'full', component: NotFoundComponent },
 ];
