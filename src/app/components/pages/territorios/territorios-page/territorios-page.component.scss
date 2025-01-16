@@ -1,0 +1,137 @@
+.__territorios__ {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10rem;
+}
+
+.__our_territorios__ {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10rem;
+}
+
+.carrosel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linha {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-black);
+}
+
+.txt_carrosel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 15rem;
+}
+
+.txt_territorios {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    animation: scroll-horizontal 10s linear infinite;
+}
+
+.txt_item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.__txt-0__ {
+    font-weight: bold;
+    font-size: 13rem;
+    white-space: nowrap;
+}
+
+.point {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--color-black);
+    position: relative;
+    top: 1rem;
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.images_territorios_{
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.__apresentacao__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.__apresentacao__content__paragrafo_1 {
+    font-size: 35px;
+    margin: 0 72rem 0 2rem;
+    padding: 2rem;
+    text-align: justify;
+}
+
+.__img__ {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    ._img_ {
+        width: 27rem;
+    }
+}
+
+._txt_territorios {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    color: black;
+    word-break: break-word;
+}
+._txt_content_{
+    width: 21rem;
+    word-break: break-word;
+}
+
+._img_and_txt_{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}

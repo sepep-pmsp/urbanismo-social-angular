@@ -1,0 +1,50 @@
+<div class="__territorios__">
+    <div>
+        <app-sticky-hold [isHomePage]="false"></app-sticky-hold>
+    </div>
+    <div class="__our_territorios__">
+        <div class="carrosel">
+            <div class="linha"></div>
+            <div class="txt_carrosel">
+                <div class="txt_territorios">
+                    <ng-container *ngFor="let i of [].constructor(repeatCount); let index = index">
+                        <div class="txt_item">
+                            <p class="__txt-0__">territórios</p>
+                            <div class="point"></div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+            <div class="linha"></div>
+        </div>
+    </div>
+    <div class="__apresentacao__">
+        <div class="__apresentacao__content" *ngFor="let item of apresentation">
+            <div class="__apresentacao__content__paragrafo_1">
+                <p>{{ item.txt_1 }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="images_territorios_">
+        <div *ngFor="let territorio of territorios; let i = index" class="__img__">
+          <div class="_img_and_txt_">
+            <div>
+              <a [routerLink]="['/territorio', territorio.url]">
+                <img
+                  [src]="[images[0].img_pink, images[0].img_orange, images[0].img_blue, images[0].img_yellow][i]"
+                  [alt]="'Imagem do ' + territorio.title"
+                  class="_img_"
+                />
+              </a>
+            </div>
+            <div class="_txt_content_">
+              <p class="_txt_territorios">
+                <a [routerLink]="['/territorio', territorio.url]" class="_txt_territorios">
+                  {{ [images[0].txt_pink, images[0].txt_orange, images[0].txt_blue, images[0].txt_yellow][i] }}
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>      
+</div>
