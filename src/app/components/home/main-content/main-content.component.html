@@ -25,9 +25,11 @@
         </div>
         <div class="territorios_sp">
             <div class="tooltip-container">
-                <button class="btn_territory">
-                    <span class="txt">os territórios</span>
-                </button>
+                <a [routerLink]="'/territorios'">
+                    <button class="btn_territory">
+                        <span class="txt">os territórios</span>
+                    </button>
+                </a>
                 <div class="tooltip top-left">
                     <img class="img_territory" [src]="images_territories[0].img_orange"
                         alt="{{ images_territories[0].territorio_orange }}">
