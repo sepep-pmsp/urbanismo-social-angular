@@ -61,8 +61,13 @@
       font-size: 30px; // Reduz o tamanho da fonte para telas menores
       transition: opacity 0.4s ease-in-out;
       font-weight: bold;
+      list-style-type: none;
+      text-decoration: none;
+
       & a{
         color: white;
+        list-style-type: none;
+        text-decoration: none;
       }
     }
   }
@@ -163,6 +168,7 @@
     font-weight: bold;
     height: 6rem;
     padding: 2rem 0 0 0;
+    list-style-type: none;
   }
   ._s_ {
     background-color: var(--color-secondary);
@@ -170,6 +176,7 @@
     font-weight: bold;
     height: 6rem;
     padding: 2rem 0 0 0;
+    list-style-type: none;
   }
   ._t_ {
     background-color: var(--color-tertiary);
@@ -177,6 +184,7 @@
     font-weight: bold;
     height: 6rem;
     padding: 2rem 0 0 0;
+    list-style-type: none;
   }
   ._e_ {
     background-color: var(--color-quinary);
@@ -184,6 +192,7 @@
     font-weight: bold;
     height: 6rem;
     padding: 2rem 0 0 0;
+    list-style-type: none;
   }
   ._n_ {
     background-color: var(--color-senary);
@@ -191,6 +200,7 @@
     font-weight: bold;
     height: 6rem;
     padding: 2rem 0 0 0;
+    list-style-type: none;
   }
   ._g_ {
     background-color: var(--color-denary);
@@ -198,6 +208,7 @@
     font-weight: bold;
     height: 6rem;
     padding: 2rem 0 0 0;
+    list-style-type: none;
   }
   ._exit_ {
     background-color: var(--color-septenary);
@@ -205,5 +216,6 @@
     font-weight: bold;
     height: 6rem;
     padding: 2rem 0 0 0;
+    list-style-type: none;
   }
 }

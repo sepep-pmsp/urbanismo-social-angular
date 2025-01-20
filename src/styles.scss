@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,200&display=swap');
+
 *{
     margin: 0;
 	padding: 0;
@@ -48,15 +50,15 @@ table {
 }
 
 h1, h2, h3{
-    font-family: "Roboto", sans-serif;
-  	font-weight: 100;
+    font-family: "Anton", serif;
+  	font-weight: 400;
   	font-style: normal;
 }
 
 p, q, ol, ul, li, a{
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
-  	font-weight: 400;
+    font-family: "DM Sans", serif;
+  	font-optical-sizing: auto;
+  	font-weight: 600;
   	font-style: normal;
     list-style-type: none;
 }

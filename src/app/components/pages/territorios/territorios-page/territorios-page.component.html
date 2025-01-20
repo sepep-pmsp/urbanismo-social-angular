@@ -9,7 +9,7 @@
                 <div class="txt_territorios">
                     <ng-container *ngFor="let i of [].constructor(repeatCount); let index = index">
                         <div class="txt_item">
-                            <p class="__txt-0__">territórios</p>
+                            <h1 class="__txt-0__">territórios</h1>
                             <div class="point"></div>
                         </div>
                     </ng-container>
@@ -38,11 +38,11 @@
               </a>
             </div>
             <div class="_txt_content_">
-              <p class="_txt_territorios">
+              <h3 class="_txt_territorios">
                 <a [routerLink]="['/territorio', territorio.url]" class="_txt_territorios">
                   {{ [images[0].txt_pink, images[0].txt_orange, images[0].txt_blue, images[0].txt_yellow][i] }}
                 </a>
-              </p>
+              </h3>
             </div>
           </div>
         </div>
