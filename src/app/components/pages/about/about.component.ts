@@ -35,12 +35,11 @@ export class AboutComponent {
   ];
 
   video: { title: string; video: SafeResourceUrl; type: string }[] = [];
-
   constructor(private sanitizer: DomSanitizer) {
     this.video = [
       {
         title: 'vídeo institucional',
-        video: this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/DzssQHFaoV4'),
+        video: this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/s9Jw5XrDdy8?si=yJKbj8Qk-APQJrEN'),
         type: 'video/youtube'
       }
     ];
