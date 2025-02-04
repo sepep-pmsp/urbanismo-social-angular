@@ -21,13 +21,13 @@ export class TerritoriosPageComponent {
   ];
   images = [
     {
-      img_pink: 'assets/images/parque_novo_mundo-contorno.svg',
+      img_pink: 'assets/territorios/parque_novo_mundo-contorno.svg',
       txt_pink: 'Parque Novo Mundo',
-      img_blue: 'assets/images/lapenna-contorno.svg',
+      img_blue: 'assets/territorios/lapenna-contorno.svg',
       txt_blue: 'Jardim Lapenna',
-      img_orange: 'assets/images/pinheirinho-contorno.svg',
+      img_orange: 'assets/territorios/pinheirinho-contorno.svg',
       txt_orange: 'Pinheirinho D água',
-      img_yellow: 'assets/images/pantanal-contorno.svg',
+      img_yellow: 'assets/territorios/pantanal-contorno.svg',
       txt_yellow: 'Jardim Pantanal'
     }
   ];

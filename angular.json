@@ -33,6 +33,14 @@
               "src/assets",
               "src/assets/icons",
               "src/assets/images",
+              "src/assets/carrosel",
+              "src/assets/carrosel/lapenna",
+              "src/assets/carrosel/pantanal",
+              "src/assets/carrosel/pinheirinho",
+              "src/assets/carrosel/pq-novo-mundo",
+              "src/assets/maps",
+              "src/assets/parceiros",
+              "src/assets/territorios",
               "src/assets/json"
             ],
             "styles": [
@@ -93,7 +101,19 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets",
+              "src/assets/icons",
+              "src/assets/images",
+              "src/assets/carrosel",
+              "src/assets/carrosel/lapenna",
+              "src/assets/carrosel/pantanal",
+              "src/assets/carrosel/pinheirinho",
+              "src/assets/carrosel/pq-novo-mundo",
+              "src/assets/maps",
+              "src/assets/parceiros",
+              "src/assets/territorios",
+              "src/assets/json"
             ],
             "styles": [
               "src/styles.scss"

@@ -46,31 +46,29 @@
         <button class="control next" (click)="nextSlide()">&gt;</button>
       </div>
     </div>
-
     <div class="carrosel-2">
       <div class="txt-maps">
         <h2 class="title-maps">banco de imagens</h2>
       </div>
       <div class="carou_txt">
         <div class="carousel-container">
-            <div class="carousel-main">
-                <img [src]="slides[currentSlide].image" alt="Imagem do carrossel"
-                    class="carousel-images slide-animation" />
-                <div class="carousel-description slide-animation">
-                    <p>{{ slides[currentSlide].caption }}</p>
-                    <button (click)="nextSlides()" class="carousel-next" aria-label="Próximo Slide">
-                        &#9654;
-                    </button>
-                </div>
+          <div class="carousel-main">
+            <img [src]="slides[currentSlide].image" alt="Imagem do carrossel" class="carousel-images slide-animation" />
+            <div class="carousel-description slide-animation">
+              <p>{{ slides[currentSlide].caption }}</p>
+              <button (click)="nextSlides()" class="carousel-next" aria-label="Próximo Slide">
+                &#9654;
+              </button>
             </div>
-            <div class="carousel-thumbnails">
-                <div *ngFor="let slide of visibleSlides; let i = index" [class.active]="i === activeThumbnail"
-                    class="thumbnail slide-animation" (click)="setSlide(i)">
-                    <img [src]="slide.image" alt="Miniatura {{ i }}" />
-                </div>
+          </div>
+          <div class="carousel-thumbnails">
+            <div *ngFor="let slide of visibleSlides; let i = index" [class.active]="i === activeThumbnail"
+              class="thumbnail slide-animation" (click)="setSlide(i)">
+              <img [src]="slide.image" alt="Miniatura {{ i }}" />
             </div>
+          </div>
         </div>
-    </div>
+      </div>
     </div>
   </div>
 </div>
