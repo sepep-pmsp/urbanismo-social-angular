@@ -8,6 +8,10 @@
     padding-top: 13rem;
 }
 
+p{
+    line-height: 52px;
+}
+
 .letreiro {
     display: flex;
     flex-direction: column;
@@ -91,7 +95,7 @@
 .law-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
     gap: 3rem;
@@ -109,17 +113,18 @@
     .law-item {
         padding: 1rem 0;
 
-        .law-title {
+        .law-title, a {
             text-decoration: underline;
             font-weight: bold;
             font-size: 2rem;
+            color: var(--color-black);
         }
         .law-text {
             text-align: justify;
             font-size: 25px;
         }
 
-        .law-content-txt{
+        .law-content-txt {
             width: 58rem;
             display: flex;
             flex-direction: column;
@@ -128,7 +133,9 @@
             gap: 3rem;
         }
 
-        &.item1, &.item3, &.item5{
+        &.item1,
+        &.item3,
+        &.item5 {
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -137,46 +144,49 @@
             gap: 4rem;
             padding: 0 20rem 0 0;
         }
-        &.item2, &.item4{
+        &.item2,
+        &.item4 {
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
             justify-content: center;
             flex-wrap: nowrap;
             gap: 4rem;
-            padding: 0 0 0 20rem;
+            padding: 0 0 0 25rem;
         }
     }
 }
 
-.img-item{
+.img-item {
     right: 39rem;
     bottom: 16rem;
 }
 
-.section-title_1, .section-title_3 {
+.section-title_1,
+.section-title_3 {
     width: 46%;
     font-size: 3rem;
     text-decoration: underline;
     text-transform: uppercase;
 }
 
-.section-title_0, .section-title_4 {
+.section-title_0,
+.section-title_4 {
     font-size: 5rem;
     font-weight: bold;
 
-    &.section-title_4{
+    &.section-title_4 {
         padding: 0 0 4rem 6rem;
     }
 }
 
 .section-content {
-    font-size: 20px;
+    font-size: 27px;
     width: 51rem;
     text-align: justify;
 }
 
-.images{
+.images {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -185,11 +195,11 @@
     gap: 3rem;
 }
 
-.meta{
+.meta {
     width: 61%;
 }
 
-.section-3{
+.section-3 {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -198,7 +208,7 @@
     gap: 7rem;
 }
 
-.section-institucional{
+.section-institucional {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -208,7 +218,7 @@
     gap: 8rem;
 }
 
-.list-institucional{
+.list-institucional {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -217,38 +227,42 @@
     gap: 4rem;
 }
 
-.institucional-title{
+.institucional-title {
     font-size: 2rem;
     word-break: break-word;
     width: 26rem;
 
-    &.cooperation-title-line{
-        text-align: center
+    &.cooperation-title-line {
+        text-align: center;
     }
 }
 
-.institutional-item, .cooperation-item{
+.institutional-item,
+.cooperation-item {
     font-size: 25px;
     padding: 5px 0;
 }
 
-.institutional-governance, .coordination, .cooperation, .partners{
+.institutional-governance,
+.coordination,
+.cooperation,
+.partners {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: stretch;
 
-    &.partners{
+    &.partners {
         width: 95rem;
     }
 
-    &.coordination{
+    &.coordination {
         gap: 7rem;
     }
 }
 
-.box-coordination-color-1{
+.box-coordination-color-1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,62 +272,64 @@
     height: 24rem;
     border-radius: 9rem;
 
-    .box-coordination-color-2{
+    .box-coordination-color-2 {
         width: 18rem;
         height: 18rem;
         background-color: var(--color-primary);
         border-radius: 6rem;
         display: flex;
         align-items: center;
-        justify-content: center; 
-        text-align: center;   
+        justify-content: center;
+        text-align: center;
     }
 }
 
-.coordination-txt-1{
+.coordination-txt-1 {
     padding: 0 0 2rem 0;
 }
 
-.coordination-txt-2{
+.coordination-txt-2 {
     padding: 2rem 0 0 0;
 }
 
-.coordination-text_1{
+.coordination-text_1 {
     font-weight: bold;
     font-size: 2rem;
     word-break: break-word;
 }
 
-.coordination-text_2{
+.coordination-text_2 {
     font-weight: bold;
     font-size: 3rem;
     word-break: break-word;
 }
 
-.partners-text{
+.partners-text {
     font-size: 2rem;
     word-break: break-word;
     width: 33rem;
 }
 
-.institucional_txt, .cooperation-title, .partners-title{
+.institucional_txt,
+.cooperation-title,
+.partners-title {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    &.partners-title{
+    &.partners-title {
         width: 27rem;
     }
 }
 
-.curva{
+.curva {
     position: relative;
     right: 5rem;
     width: 0rem;
     bottom: 1rem;
 
-    &.curva-institucional{
+    &.curva-institucional {
         position: relative;
         right: 5rem;
         width: 0rem;
@@ -321,7 +337,7 @@
     }
 }
 
-.section-5{
+.section-5 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -330,7 +346,7 @@
     padding: 5rem 1rem;
 }
 
-.learn-more-button{
+.learn-more-button {
     border: none;
     background-color: var(--color-quaternary);
     color: var(--color-primary);
@@ -339,4 +355,28 @@
     height: 10rem;
     width: 27rem;
     border-radius: 3rem;
+}
+
+.img-item1,
+.img-item3,
+.img-item5 {
+    position: relative;
+    right: 10rem;
+}
+
+.img-item2,
+.img-item4 {
+    position: relative;
+    left: 8rem;
+}
+
+.item-relative {
+    position: relative;
+    right: 4rem;
+}
+
+.item-relative2,
+.item-relative4 {
+    position: relative;
+    left: 3.2rem;
 }

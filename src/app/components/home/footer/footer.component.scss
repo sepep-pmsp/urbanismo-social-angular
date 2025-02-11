@@ -1,6 +1,6 @@
 .footer__row__container {
     position: relative;
-    background-color: #e34358;
+    background-color: var(--color-footer);
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -8,6 +8,7 @@
     align-items: stretch;
     gap: 2rem;
     z-index: 5;
+    padding: 5rem 0;
 }
 ._img_search {
     display: flex;
@@ -26,7 +27,7 @@
 }
 
 .busca_footer {
-    border: 1px solid #e34358;
+    border: 1px solid var(--color-footer);
     border-radius: 5rem;
     width: 19rem;
     height: 4rem;
@@ -58,15 +59,16 @@
 }
 
 .list_principal,
-.list_secundary {
+.list_secundary, a{
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     padding: 0.2em;
     list-style-type: none;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    text-decoration: none;
 }
 
 .img-prefeitura {
@@ -114,7 +116,7 @@
     width: 17rem;
     font-size: 29px;
     background-color: white;
-    color: #e34358;
+    color: var(--color-footer);
     font-weight: bold;
 }
 

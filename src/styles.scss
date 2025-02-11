@@ -58,7 +58,7 @@ h1, h2, h3{
 p, q, ol, ul, li, a{
     font-family: "DM Sans", serif;
   	font-optical-sizing: auto;
-  	font-weight: 600;
+  	font-weight: 200;
   	font-style: normal;
     list-style-type: none;
 }
@@ -75,6 +75,7 @@ p, q, ol, ul, li, a{
 	--color-nonary: 	#FBBC1A;
 	--color-denary: 	#B3A8B1;
 	--color-black:		black;
+	--color-footer:		#e34358;	
 }
 
 ::-webkit-scrollbar {

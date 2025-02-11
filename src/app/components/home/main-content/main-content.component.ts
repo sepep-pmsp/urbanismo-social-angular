@@ -24,10 +24,10 @@ export class MainContentComponent {
   ];
 
   images_territories = [
-    { territorio_orange: 'Parque Novo Mundo', img_orange: 'assets/images/parque_novo_mundo-1.svg' },
-    { territorio_pink: 'Pinheirinho d’água', img_pink: 'assets/images/pinheirinho_dagua-1.svg' },
-    { territorio_blue: 'Jardim Lapenna', img_blue: 'assets/images/jardim_lapenna-1.svg' },
-    { territorio_yellow: 'Jardim Pantanal', img_yellow: 'assets/images/jardim_pantanal-1.svg' },
+    { territorio_orange: 'Parque Novo Mundo', img_orange: 'assets/territorios/parque_novo_mundo-1.svg' },
+    { territorio_pink: 'Pinheirinho d’água', img_pink: 'assets/territorios/pinheirinho_dagua-1.svg' },
+    { territorio_blue: 'Jardim Lapenna', img_blue: 'assets/territorios/jardim_lapenna-1.svg' },
+    { territorio_yellow: 'Jardim Pantanal', img_yellow: 'assets/territorios/jardim_pantanal-1.svg' },
   ];
 
   carouselImages = [

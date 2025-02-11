@@ -23,54 +23,112 @@
             <div class="_list_equipe_" *ngIf="territorio && territorio.equipe">
               <h2 class="ancora">{{ territorio.funcao }}</h2>
               <ul *ngFor="let membro of territorio.equipe">
-                <li class="txt-p">{{ membro.equipe_txt }}</li>
-                <li class="txt-p">{{ membro.nome }}</li>
-                <li class="txt-p">{{ membro.endereco }}</li>
+                <li class="txt-p txt-list">{{ membro.equipe_txt }}</li>
+                <li class="txt-p txt-list">{{ membro.nome }}</li>
+                <li class="txt-p txt-list">{{ membro.endereco }}</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="carrosel-1">
-      <div class="txt-maps">
-        <h2 class="title-maps">mapas</h2>
-      </div>
-      <div class="carousel-containe">
-        <div class="carousel" [style.transform]="'translateX(' + (-currentSlide * 100) + '%)'">
-          <div class="carousel-item" *ngFor="let mapa of territorio.mapas[0] | keyvalue; let i = index">
-            <img class="img-carrosel-1" [src]="mapa.value" [alt]="'Imagem do Mapa ' + (i + 1)" />
+    <div class="_carroseis_">
+      <div class="_carrosel_mapas_">
+        <div class="carrosel-1">
+          <div class="carousel-container">
+            <div class="carrosel-1">
+              <div class="txt-maps">
+                <h2 class="title-maps">Mapas</h2>
+              </div>
+              <div class="carousel-containe">
+                <div class="carousel" [style.transform]="'translateX(' + (-currentSlide * 100) + '%)'">
+                  <div class="carousel-item" *ngFor="let mapa of territorio.mapas[0] | keyvalue; let i = index">
+                    <img class="img-carrosel-1" [src]="mapa.value" [alt]="'Imagem do Mapa ' + (i + 1)" />
+                  </div>
+                </div>
+                <button class="control prev" (click)="prevSlide()">&lt;</button>
+                <button class="control next" (click)="nextSlide()">&gt;</button>
+              </div>
+            </div>
           </div>
         </div>
-        <button class="control prev" (click)="prevSlide()">&lt;</button>
-        <button class="control next" (click)="nextSlide()">&gt;</button>
+      </div>
+      <div class="txt-apresentacao">
+        <h3 class="apresentacao">Conheça um pouco mais o {{territorio.title}}</h3>
+      </div>
+      <div class="_carrossel_territorios_atividades_">
+        <div>
+          <section class="carousel__container__atividades">
+            <div class="container">
+              <div class="carousel_title">
+                <p class="title-territorio">Imagens do território</p>
+              </div>
+              <div class="carousel">
+                <input *ngFor="let slide of territorio.carrossel_territorios; let i = index" type="radio"
+                  name="slides-territorios" [checked]="i === 0" [id]="'slide-territorios' + (firstVisibleIndex + i)"
+                  class="input_atividades">
+                <ul class="carousel__slides">
+                  <li *ngFor="let slide of territorio.carrossel_territorios; let i = index" class="carousel__slide">
+                    <figure class="carousel__slide__figure_atividades">
+                      <div class="carousel__slide__atividades__div">
+                        <img [src]="slide.img" alt="Slide {{ firstVisibleIndex + i }}"
+                          class="carousel__slide__atividades__img">
+                      </div>
+                      <figcaption class="carousel__slide__figcaption">
+                        <span class="slide_text_atividades"><p class="_txt_">{{ slide.caption }}</p></span>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+                <ul class="carousel__thumbnails">
+                  <li *ngFor="let slide of territorio.carrossel_territorios; let i = index"
+                    class="carousel__thumbnails__li_atividades">
+                    <label [for]="'slide-territorios' + (firstVisibleIndex + i)"
+                      class="carousel__thumbnails__label_atividades">
+                      <img [src]="slide.img" alt="Thumbnail {{ firstVisibleIndex + i }}" class="img_atividades_id">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section class="carousel__container__atividades">
+            <div class="container">
+              <div class="carousel_title">
+                <p class="title-atividades">Atividades no Território</p>
+              </div>
+              <div class="carousel">
+                <input *ngFor="let slide of paginatedSlides; let i = index" type="radio" name="slides-atividades"
+                  [checked]="i === 0" [id]="'slide-atividades' + (firstVisibleIndex + i)" class="input_atividades">
+                <ul class="carousel__slides">
+                  <li *ngFor="let slide of paginatedSlides; let i = index" class="carousel__slide">
+                    <figure class="carousel__slide__figure_atividades">
+                      <div class="carousel__slide__atividades__div">
+                        <img [src]="slide.img" alt="Slide {{ firstVisibleIndex + i }}"
+                          class="carousel__slide__atividades__img">
+                      </div>
+                      <figcaption class="carousel__slide__figcaption">
+                        <span class="slide_text_atividades"><p class="_txt_">{{ slide.caption }}</p></span>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+                <ul class="carousel__thumbnails">
+                  <li *ngFor="let slide of paginatedSlides; let i = index" class="carousel__thumbnails__li_atividades">
+                    <label [for]="'slide-atividades' + (firstVisibleIndex + i)"
+                      class="carousel__thumbnails__label_atividades">
+                      <img [src]="slide.img" alt="Thumbnail {{ firstVisibleIndex + i }}" class="img_atividades_id">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
 
-    <div class="carrosel-2">
-      <div class="txt-maps">
-        <h2 class="title-maps">banco de imagens</h2>
-      </div>
-      <div class="carou_txt">
-        <div class="carousel-container">
-            <div class="carousel-main">
-                <img [src]="slides[currentSlide].image" alt="Imagem do carrossel"
-                    class="carousel-images slide-animation" />
-                <div class="carousel-description slide-animation">
-                    <p>{{ slides[currentSlide].caption }}</p>
-                    <button (click)="nextSlides()" class="carousel-next" aria-label="Próximo Slide">
-                        &#9654;
-                    </button>
-                </div>
-            </div>
-            <div class="carousel-thumbnails">
-                <div *ngFor="let slide of visibleSlides; let i = index" [class.active]="i === activeThumbnail"
-                    class="thumbnail slide-animation" (click)="setSlide(i)">
-                    <img [src]="slide.image" alt="Miniatura {{ i }}" />
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
   </div>
 </div>

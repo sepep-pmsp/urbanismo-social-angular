@@ -17,24 +17,22 @@ export class FooterComponent {
 
   list_principal=[
     {txt : 'início', link: '/'},
-    {txt : 'sobre nós', link: '/sobre'},
-    {txt : 'territórios', link: ''},
+    {txt : 'sobre nós', link: '/sobre-nos'},
+    {txt : 'territórios', link: '/territorios'},
     {txt : 'eventos', link: ''},
-    {txt : 'acervo', link: ''},
+    
   ];
 
   list_secundary = [
     {txt2 : 'notícias', link: ''},
-    {txt2 : 'governaça', link: ''},
-    {txt2 : 'parceiros', link: ''},
-    {txt2 : 'marcos institucionais', link: ''},
-    {txt2 : 'órgãos colegiados', link: ''},
+    {txt2 : 'governaça', link: '/governanca'},
+    //{txt2 : 'parceiros', link: 'parceiros'},
+    {txt2 : 'acervo', link: ''},
   ]
 
   adresse = [
     { adress:'Viaduto do Chá, 15 - Centro Histórico de São Paulo, São Paulo - SP, 01007-040' },
-    { email:'urbanismosocial@prefeitura.sp.gov.br' },
-    { tele:'0800-175717' }
+    { link_pagina:'https://capital.sp.gov.br/planejamento' },
   ];
 
   img_negativo= [

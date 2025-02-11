@@ -18,7 +18,7 @@
             </div>
             <div class="secundary">
                 <ul class="list-seg" *ngFor="let list2 of list_secundary">
-                    <li class="list_secundary">{{ list2.txt2 }}</li>
+                    <li class="list_secundary"><a href="{{ list2.link }}">{{ list2.txt2 }}</a></li>
                 </ul>
             </div>
         </div>
@@ -32,24 +32,8 @@
                 <p class="container_adress">{{ texto.adress }}</p>
             </span>
             <span>
-                <p class="container_adress">{{ texto.email }}</p>
+                <p class="container_adress">{{ texto.link_pagina }}</p>
             </span>
-            <span>
-                <p class="container_adress">{{ texto.tele }}</p>
-            </span>
-        </div>
-    </div>
-    <div class="container___news__links">
-        <div class="container_links" >
-            <div class="images1" *ngFor="let imagess of img_negativo">
-                <img 
-                [src]="imagess.imgs" 
-                alt="" 
-                [class]="imagess.class" >
-            </div>
-            <div class="imgs_2" *ngFor="let images of links_rede">
-                <img [src]="images.img" [class]="images.class" alt="">
-            </div>
         </div>
     </div>
 </div>

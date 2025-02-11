@@ -16,18 +16,18 @@ export class TerritoriosPageComponent {
 
   apresentation = [
     {
-      txt_1: 'Para o Programa de Urbanismo Social, a Prefeitura de São Paulo elegeu 4 territórios pilotos: Parque Novo Mundo e Pinheirinho D’água, ambos com um Centro Educacional Unificado (CEU) como equipamento âncora do projeto; Jardim Lapenna e Jardim Pantanal, com a presença de Organizações da Sociedade Civil, no caso, a Fundação Tide Setúbal e Instituto Alana, respectivamente, ambos parceiros do Programa. Os territórios são marcados por situações de vulnerabilidade, apresentando características físicas e sociais distintas, bem como diferentes agentes que atuam em suas respectivas áreas.'
+      txt_1: 'O projeto piloto de Urbanismo Social em São Paulo contempla quatro áreas específicas, chamadas de territórios piloto. Esses territórios são delimitados dentro de regiões específicas da cidade, o que permite testar e avaliar propostas integradas em escala urbana reduzida. Os territórios definidos são o Parque Novo Mundo, Pinheirinho D’água, Jardim Lapenna e Jardim Pantanal. São marcados por situações de vulnerabilidade, apresentando características físicas e sociais distintas, bem como diferentes agentes que atuam em suas respectivas áreas.'
     },
   ];
   images = [
     {
-      img_pink: 'assets/images/parque_novo_mundo-contorno.svg',
+      img_pink: 'assets/territorios/parque_novo_mundo-contorno.svg',
       txt_pink: 'Parque Novo Mundo',
-      img_blue: 'assets/images/lapenna-contorno.svg',
+      img_blue: 'assets/territorios/lapenna-contorno.svg',
       txt_blue: 'Jardim Lapenna',
-      img_orange: 'assets/images/pinheirinho-contorno.svg',
+      img_orange: 'assets/territorios/pinheirinho-contorno.svg',
       txt_orange: 'Pinheirinho D água',
-      img_yellow: 'assets/images/pantanal-contorno.svg',
+      img_yellow: 'assets/territorios/pantanal-contorno.svg',
       txt_yellow: 'Jardim Pantanal'
     }
   ];
