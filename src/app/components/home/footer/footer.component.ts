@@ -18,14 +18,14 @@ export class FooterComponent {
   list_principal=[
     {txt : 'início', link: '/'},
     {txt : 'sobre nós', link: '/sobre-nos'},
-    {txt : 'territórios', link: 'territorios'},
+    {txt : 'territórios', link: '/territorios'},
     {txt : 'eventos', link: ''},
     
   ];
 
   list_secundary = [
     {txt2 : 'notícias', link: ''},
-    {txt2 : 'governaça', link: 'governanca'},
+    {txt2 : 'governaça', link: '/governanca'},
     //{txt2 : 'parceiros', link: 'parceiros'},
     {txt2 : 'acervo', link: ''},
   ]

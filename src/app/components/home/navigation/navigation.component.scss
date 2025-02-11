@@ -13,6 +13,10 @@
   height: auto;
 }
 
+p{
+  line-height: 52px;
+}
+
 .__list__navigation__ {
   position: relative;
   display: flex;
@@ -81,7 +85,6 @@
 
     ._txt_list {
       opacity: 1;
-      padding: 8px 0 0 0;
     }
   }
 }
