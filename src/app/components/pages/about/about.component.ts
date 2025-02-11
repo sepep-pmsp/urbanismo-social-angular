@@ -16,7 +16,8 @@ export class AboutComponent {
   apresentacao = [
     {
       txt_1: 'O urbanismo social é uma estratégia de intervenção urbana que, a partir da articulação das políticas públicas municipais, urbanização de espaços públicos livres e participação social, tem como principal objetivo a qualificação de territórios com altos índices vulnerabilidade e a promoção de espaços acolhedores, resilientes e seguros, de modo a reduzir as desigualdades socioespaciais no município.', 
-      txt_2: 'Os projetos são únicos, elaborados para atender as necessidades particulares diagnosticadas em cada território. Eles passam por diversas fases, tendo início com a construção de um Diagnóstico Técnico-Participativo e Plano de Ação, resultando em projetos de intervenção de espaços públicos e na implementação das políticas públicas integradas no território. Veja abaixo os eixos de atuação.'
+      txt_2: 'Os projetos são únicos, elaborados para atender as necessidades particulares diagnosticadas em cada território. Eles passam por diversas fases, tendo início com a construção de um Diagnóstico Técnico-Participativo e Plano de Ação, resultando em projetos de intervenção de espaços públicos e na implementação das políticas públicas integradas no território.',
+      txt_3: 'Para o Programa de Urbanismo Social, a Prefeitura de São Paulo elegeu quatro territórios pilotos: Parque Novo Mundo e Pinheirinho D’água, ambos com um Centro Educacional Unificado (CEU) como equipamento âncora do projeto; Jardim Lapenna e Jardim Pantanal, com a presença de Organizações da Sociedade Civil, no caso, a Fundação Tide Setubal e Instituto Alana, respectivamente, ambos parceiros do Programa.'
     },
   ];
 

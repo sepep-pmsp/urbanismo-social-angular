@@ -28,11 +28,11 @@
                 <h2 class="section-title_1">{{ content.title_h2 }}</h2>
                 <ul class="law-list">
                     <li *ngFor="let law of content.laws; let i = index" [class]="'law-item item' + (i + 1)">
-                        <div class="img-item">
-                            <img [src]="law.img_law" alt="Imagem da lei {{ law.title }}" />
+                        <div [class]="'img-item' + (i + 1)">
+                            <img class="img-law" [src]="law.img_law" alt="Imagem da lei {{ law.title }}" />
                         </div>
-                        <div class="law-content-txt">
-                            <h3 class="law-title">{{ law.title }}</h3>
+                        <div class="law-content-txt" [class]="'item-relative' + (i + 1)">
+                            <a href="{{law.link}}" target="_blank"><h3 class="law-title">{{ law.title }}</h3></a>
                             <p class="law-text">{{ law.text }}</p>
                         </div>
                     </li>
