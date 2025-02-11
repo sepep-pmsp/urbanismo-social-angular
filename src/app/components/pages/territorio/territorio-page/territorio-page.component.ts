@@ -280,7 +280,7 @@ export class TerritorioPageComponent implements OnInit {
           caption: 'Visão aérea do Jardim Pantanal, no entorno do Espaço Alana. Fonte: SMSU/DTS/Dronepol'
         },
         {
-          img: 'assets/carrosel/pantanal/territorio-4.jpg',
+          img: 'assets/carrosel/pantanal/territorio-4.png',
           caption: 'Rua sem asfalto no Jardim Pantanal. Fonte: SMUL.'
         }
       ],
@@ -343,8 +343,11 @@ export class TerritorioPageComponent implements OnInit {
 
   territorio: any;
   currentPage: number = 0;
-  totalSlides: number = 6; // Número de imagens visíveis de cada vez
-
+  totalSlides: number = 20;
+  currentIndex: number = 0;
+  intervalId: any;
+  currentSlide: number = 0;
+  
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -356,9 +359,9 @@ export class TerritorioPageComponent implements OnInit {
         this.territorio = foundTerritory;
       }
     }
+    this.startAutoSlide();
   }
 
-  // Método para obter os slides da página atual
   get paginatedSlides() {
     if (!this.territorio?.carrossel_atividades) return [];
 
@@ -366,24 +369,42 @@ export class TerritorioPageComponent implements OnInit {
     return this.territorio.carrossel_atividades.slice(start, start + this.totalSlides);
   }
 
-  // Avança para a próxima página de slides
   nextPage() {
     if ((this.currentPage + 1) * this.totalSlides < this.territorio.carrossel_atividades.length) {
       this.currentPage++;
     }
   }
 
-  // Volta para a página anterior de slides
   prevPage() {
     if (this.currentPage > 0) {
       this.currentPage--;
     }
   }
 
-  // Obtém o índice do primeiro slide visível na página atual
   get firstVisibleIndex(): number {
     return this.currentPage * this.totalSlides + 1;
   }
 
+  startAutoSlide() {
+    this.intervalId = setInterval(() => {
+      this.nextSlide();
+    }, 1000000);
+  }
+  
+  ngOnDestroy() {
+    clearInterval(this.intervalId);
+  }
+  
+  nextSlide() {
+    if (!this.territorio || !this.territorio.mapas || this.territorio.mapas[0].length === 0) return;
+    const totalSlides = Object.keys(this.territorio.mapas[0]).length;
+    this.currentSlide = (this.currentSlide + 1) % totalSlides;
+  }
+  
+  prevSlide() {
+    if (!this.territorio || !this.territorio.mapas || this.territorio.mapas[0].length === 0) return;
+    const totalSlides = Object.keys(this.territorio.mapas[0]).length;
+    this.currentSlide = (this.currentSlide - 1 + totalSlides) % totalSlides;
+  }
 
 }

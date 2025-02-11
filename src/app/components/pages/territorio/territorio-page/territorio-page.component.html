@@ -32,78 +32,103 @@
         </div>
       </div>
     </div>
-    <!-- <section class="carousel__container__territorios">
-      <div class="container">
-        <div class="carousel">
-          <input *ngFor="let slide of territorio.carrossel_territorios; let i = index" type="radio" name="slides" [checked]="i === 0" [id]="'slide-' + (i + 1)">
-          <ul class="carousel__slides">
-            <li *ngFor="let slide of territorio.carrossel_territorios" class="carousel__slide">
-              <figure>
-                <div>
-                  <img [src]="slide.img" alt="Slide">
+    <div class="_carroseis_">
+      <div class="_carrosel_mapas_">
+        <div class="carrosel-1">
+          <div class="carousel-container">
+            <div class="carrosel-1">
+              <div class="txt-maps">
+                <h2 class="title-maps">Mapas</h2>
+              </div>
+              <div class="carousel-containe">
+                <div class="carousel" [style.transform]="'translateX(' + (-currentSlide * 100) + '%)'">
+                  <div class="carousel-item" *ngFor="let mapa of territorio.mapas[0] | keyvalue; let i = index">
+                    <img class="img-carrosel-1" [src]="mapa.value" [alt]="'Imagem do Mapa ' + (i + 1)" />
+                  </div>
                 </div>
-                <figcaption>
-                  <span>{{ slide.caption }}</span>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-          <ul class="carousel__thumbnails">
-            <li *ngFor="let slide of territorio.carrossel_territorios; let i = index">
-              <label [for]="'slide-' + (i + 1)">
-                <img [src]="slide.img" alt="Thumbnail {{i + 1}}">
-              </label>
-            </li>
-          </ul>
+                <button class="control prev" (click)="prevSlide()">&lt;</button>
+                <button class="control next" (click)="nextSlide()">&gt;</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section> -->
+      <div class="txt-apresentacao">
+        <h3 class="apresentacao">Conheça um pouco mais o {{territorio.title}}</h3>
+      </div>
+      <div class="_carrossel_territorios_atividades_">
+        <div>
+          <section class="carousel__container__atividades">
+            <div class="container">
+              <div class="carousel_title">
+                <p class="title-territorio">Imagens do território</p>
+              </div>
+              <div class="carousel">
+                <input *ngFor="let slide of territorio.carrossel_territorios; let i = index" type="radio"
+                  name="slides-territorios" [checked]="i === 0" [id]="'slide-territorios' + (firstVisibleIndex + i)"
+                  class="input_atividades">
+                <ul class="carousel__slides">
+                  <li *ngFor="let slide of territorio.carrossel_territorios; let i = index" class="carousel__slide">
+                    <figure class="carousel__slide__figure_atividades">
+                      <div class="carousel__slide__atividades__div">
+                        <img [src]="slide.img" alt="Slide {{ firstVisibleIndex + i }}"
+                          class="carousel__slide__atividades__img">
+                      </div>
+                      <figcaption class="carousel__slide__figcaption">
+                        <span class="slide_text_atividades"><p class="_txt_">{{ slide.caption }}</p></span>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+                <ul class="carousel__thumbnails">
+                  <li *ngFor="let slide of territorio.carrossel_territorios; let i = index"
+                    class="carousel__thumbnails__li_atividades">
+                    <label [for]="'slide-territorios' + (firstVisibleIndex + i)"
+                      class="carousel__thumbnails__label_atividades">
+                      <img [src]="slide.img" alt="Thumbnail {{ firstVisibleIndex + i }}" class="img_atividades_id">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div>
+          <section class="carousel__container__atividades">
+            <div class="container">
+              <div class="carousel_title">
+                <p class="title-atividades">Atividades no Território</p>
+              </div>
+              <div class="carousel">
+                <input *ngFor="let slide of paginatedSlides; let i = index" type="radio" name="slides-atividades"
+                  [checked]="i === 0" [id]="'slide-atividades' + (firstVisibleIndex + i)" class="input_atividades">
+                <ul class="carousel__slides">
+                  <li *ngFor="let slide of paginatedSlides; let i = index" class="carousel__slide">
+                    <figure class="carousel__slide__figure_atividades">
+                      <div class="carousel__slide__atividades__div">
+                        <img [src]="slide.img" alt="Slide {{ firstVisibleIndex + i }}"
+                          class="carousel__slide__atividades__img">
+                      </div>
+                      <figcaption class="carousel__slide__figcaption">
+                        <span class="slide_text_atividades"><p class="_txt_">{{ slide.caption }}</p></span>
+                      </figcaption>
+                    </figure>
+                  </li>
+                </ul>
+                <ul class="carousel__thumbnails">
+                  <li *ngFor="let slide of paginatedSlides; let i = index" class="carousel__thumbnails__li_atividades">
+                    <label [for]="'slide-atividades' + (firstVisibleIndex + i)"
+                      class="carousel__thumbnails__label_atividades">
+                      <img [src]="slide.img" alt="Thumbnail {{ firstVisibleIndex + i }}" class="img_atividades_id">
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
 
-    <section class="carousel__container__atividades">
-      <div class="container">
-        <div class="carousel_title">
-          <h2>Atividades no Território</h2>
-        </div>
-        <div class="carousel">
-          <!-- Inputs de rádio corrigidos para referenciar slides visíveis -->
-          <input *ngFor="let slide of paginatedSlides; let i = index" 
-            type="radio" 
-            name="slides-atividades" 
-            [checked]="i === 0" 
-            [id]="'slide-atividades' + (firstVisibleIndex + i)" 
-            class="input_atividades">
-    
-          <ul class="carousel__slides">
-            <li *ngFor="let slide of paginatedSlides; let i = index"
-              class="carousel__slide">
-              <figure class="carousel__slide__figure_atividades">
-                <div class="carousel__slide__atividades__div">
-                  <img [src]="slide.img" alt="Slide {{ firstVisibleIndex + i }}" class="carousel__slide__atividades__img">
-                </div>
-                <figcaption class="carousel__slide__figcaption">
-                  <span class="slide_text_atividades">{{ slide.caption }}</span>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-    
-          <ul class="carousel__thumbnails">
-            <li *ngFor="let slide of paginatedSlides; let i = index"
-              class="carousel__thumbnails__li_atividades">
-              <label [for]="'slide-atividades' + (firstVisibleIndex + i)" 
-                class="carousel__thumbnails__label_atividades">
-                <img [src]="slide.img" alt="Thumbnail {{ firstVisibleIndex + i }}" class="img_atividades_id">
-              </label>
-            </li>
-          </ul>
-    
-          <!-- Botões de navegação -->
-          <button (click)="prevPage()" [disabled]="currentPage === 0">❮</button>
-          <button (click)="nextPage()" 
-            [disabled]="(currentPage + 1) * totalSlides >= territorio.carrossel_atividades.length">❯</button>
-        </div>
-      </div>
-    </section>
-    
   </div>
 </div>
