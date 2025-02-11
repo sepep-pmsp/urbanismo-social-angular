@@ -259,7 +259,7 @@ export class TerritorioPageComponent implements OnInit {
       ],
       mapas: [
         {
-          img_0: 'assets/maps/pantanal-maps-1.svg',
+          img_0: 'assets/maps/pantanal-maps.svg',
           img_1: 'assets/maps/pantanal-zoneamento.svg',
           img_2: 'assets/maps/pantanal-problematica.svg',
           img_3: 'assets/maps/pantanal-potencialidades.svg',
