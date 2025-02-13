@@ -3,15 +3,15 @@ import { StickyHoldComponent } from "../../home/sticky-hold/sticky-hold.componen
 import { NgFor } from '@angular/common';
 import { title } from 'process';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { LetreiroComponent } from "../../letreiro/letreiro.component";
 
 @Component({
   selector: 'app-about',
-  imports: [StickyHoldComponent, NgFor],
+  imports: [StickyHoldComponent, NgFor, LetreiroComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
-  repeatCount = 10;
 
   apresentacao = [
     {

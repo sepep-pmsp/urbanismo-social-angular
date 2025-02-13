@@ -3,16 +3,16 @@ import { StickyHoldComponent } from '../../../home/sticky-hold/sticky-hold.compo
 import { NgFor } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { LetreiroComponent } from "../../../letreiro/letreiro.component";
 
 @Component({
   selector: 'app-territorios-page',
-  imports: [StickyHoldComponent, NgFor, HttpClientModule, RouterModule],
+  imports: [StickyHoldComponent, NgFor, HttpClientModule, RouterModule, LetreiroComponent],
   templateUrl: './territorios-page.component.html',
   styleUrl: './territorios-page.component.scss'
 
 })
 export class TerritoriosPageComponent {
-  repeatCount = 10;
 
   apresentation = [
     {

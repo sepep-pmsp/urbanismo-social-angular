@@ -5,71 +5,12 @@
     justify-content: center;
     align-items: stretch;
     gap: 10rem;
-    padding-top: 13rem;
 }
 
 p{
     line-height: 52px;
 }
 
-.letreiro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.linha {
-    width: 100%;
-    height: 3px;
-    background-color: var(--color-black);
-}
-
-.txt_letreiro {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    padding: 2rem 0;
-}
-.txt_governance {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: flex-start;
-    animation: scroll-horizontal 10s linear infinite;
-}
-
-.txt_item {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-}
-
-.__txt-0__ {
-    font-weight: bold;
-    font-size: 13rem;
-    white-space: nowrap;
-}
-
-.point {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: var(--color-black);
-    position: relative;
-    top: 1rem;
-}
-
-@keyframes scroll-horizontal {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 .container,
 .__governanca_container__ {

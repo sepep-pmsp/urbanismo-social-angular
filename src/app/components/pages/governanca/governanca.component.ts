@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { StickyHoldComponent } from "../../home/sticky-hold/sticky-hold.component";
 import { NgFor, NgIf } from '@angular/common';
+import { LetreiroComponent } from "../../letreiro/letreiro.component";
 
 @Component({
   selector: 'app-governanca',
-  imports: [RouterModule, StickyHoldComponent, NgFor, NgIf],
+  imports: [RouterModule, StickyHoldComponent, NgFor, NgIf, LetreiroComponent],
   templateUrl: './governanca.component.html',
   styleUrl: './governanca.component.scss'
 })

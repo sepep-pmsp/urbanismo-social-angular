@@ -24,7 +24,7 @@ export class FooterComponent {
   ];
 
   list_secundary = [
-    {txt2 : 'notícias', link: ''},
+    {txt2 : 'notícias', link: '/noticias'},
     {txt2 : 'governaça', link: '/governanca'},
     //{txt2 : 'parceiros', link: 'parceiros'},
     {txt2 : 'acervo', link: ''},

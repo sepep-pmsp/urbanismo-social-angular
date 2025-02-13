@@ -6,6 +6,8 @@ import { PartnersComponent } from './components/pages/partners/partners.componen
 import { NotFoundComponent } from './components/pages/not-found/not-found.component';
 import { TerritoriosPageComponent } from './components/pages/territorios/territorios-page/territorios-page.component';
 import { TerritorioPageComponent } from './components/pages/territorio/territorio-page/territorio-page.component';
+import { NewsComponent } from './components/pages/news/news/news.component';
+import { NewsPageComponent } from './components/pages/news/news-page/news-page.component';
 
 export const routes: Routes = [
     { path: '' , component: HomePageComponent },
@@ -14,5 +16,7 @@ export const routes: Routes = [
     { path: 'parceiros', component: PartnersComponent },
     { path: 'territorios', component: TerritoriosPageComponent },
     { path: 'territorio/:url', component: TerritorioPageComponent, data: { prerender: false } },
+    { path: 'noticias', component: NewsComponent },
+    { path: 'news/:url', component: NewsPageComponent },
     { path: '**', pathMatch: 'full', component: NotFoundComponent },
 ];
