@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { News, ServiceNews } from '../service-news.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { News, ServiceNews } from '../service-news.service';
 
 @Component({
   selector: 'app-news-page',

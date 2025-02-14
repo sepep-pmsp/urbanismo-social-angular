@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { StickyHoldComponent } from "../../../home/sticky-hold/sticky-hold.component";
 import { NgFor, NgIf } from '@angular/common';
 import { LetreiroComponent } from "../../../letreiro/letreiro.component";
-import { News, ServiceNews } from '../service-news.service';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { News, ServiceNews } from '../service-news.service';
 
 @Component({
   selector: 'app-news',
