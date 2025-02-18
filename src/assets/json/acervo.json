@@ -1,0 +1,26 @@
+[
+    {
+        "title": "1º Seminário de Urbanismo Social de São Paulo",
+        "date": "03.10.2023",
+        "time": "09h - 18h",
+        "description": "Realizado na sede da Prefeitura Municipal de São Paulo, o evento contou com a participação de servidores públicos e foi realizado em formato híbrido, com transmissão ao vivo pelo YouTube. O encontro teve como objetivo o compartilhamento das experiências de Urbanismo Social nacionais e internacionais, para promoção de diálogos técnicos, contribuindo com o desenho da proposta de implementação Projeto Piloto de São Paulo.",
+        "link": "https://www.youtube.com/live/bXjdsqC3Xpg?si=0KrLVBVqNWGY-ATV",
+        "img": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2023/10/not%C3%ADcia_gest%C3%A3o-1-1.jpg"
+    },
+    {
+        "title": "Lançamento do Programa de Urbanismo Social no Parque Novo Mundo",
+        "date": "02.07.2024",
+        "time": "08h – 12h",
+        "description": "O evento realizado no CEU Parque Novo Mundo - Leônidas da Silva contou com a presença do Prefeito Ricardo Nunes, representantes de diversas secretarias municipais, parceiros do Programa de Urbanismo Social e moradores da região. Durante a programação, foram inaugurados novos espaços, como a Bebeteca e a sala de cinema, além do anúncio de novos serviços e obras. A ocasião também incluiu uma série de ações de ativação urbana, com atividades culturais, lúdicas, esportivas e interativas, voltadas para todos os públicos.",
+        "link": "https://www.capital.sp.gov.br/w/prefeitura-anuncia-projeto-de-urbanismo-social-para-a-requalifica%C3%A7%C3%A3o-da-regi%C3%A3o-do-ceu-parque-novo-mundo-na-nona-norte?p_l_back_url=%2Fbusca%3Fq%3Durbanismo%2Bsocial%26news%3D79914&p_l_back_url_title=Busca",
+        "img": "https://gestaourbana.prefeitura.sp.gov.br/wp-content/uploads/2024/07/v4_PqNovoMundo_not%C3%ADcia_gest%C3%A3o.png"
+    },
+    {
+        "title": "Lançamento do Programa de Urbanismo Social no Pinheirinho D’água",
+        "date": "16.10.2024",
+        "time": "10h - 17h",
+        "description": "Evento realizado no CEU Parque Novo Mundo - Leônidas da Silva com participação de diversas secretarias municipais, parceiros do Programa de Urbanismo Social e a população. Durante a programação, foram anunciados novos serviços e obras, além de ações de ativação urbana, com atividades culturais, lúdicas, esportivas e interativas, voltadas para todos os públicos.",
+        "link": "https://capital.sp.gov.br/web/licenciamento/w/caminhos-mais-seguros-para-a-popula%C3%A7%C3%A3o-prefeitura-anuncia-projeto-de-urbanismo-social-para-a-regi%C3%A3o-do-ceu-pinheirinho-d-%C3%A1gua-na-zona-norte",
+        "img": "assets/carrosel/pinheirinho/acao-2.jpg"
+    }
+]

@@ -1,0 +1,145 @@
+.__page_acervo__ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12rem;
+}
+
+._title_ {
+    font-size: 11rem;
+    position: relative;
+    right: 11rem;
+}
+
+._body_acervo_ {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.title-acervo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.body-card-acervo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 96%;
+    align-items: center;
+    margin: 2rem;
+    justify-content: center;
+}
+
+.card-acervo {
+    width: 105rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    transition: transform 0.3s ease-in-out;
+    align-items: center;
+}
+
+.card-acervo:hover {
+    transform: scale(1.02);
+}
+
+.img_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+    filter: brightness(0.5);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    width: 20%;
+    border-radius: 1rem;
+    margin: 1rem 2rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.date,
+.time {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.quinary .card-content {
+    background-color: var(--color-quinary);
+    color: white;
+}
+
+.octonary .card-content {
+    background-color: var(--color-octonary);
+    color: white;
+}
+
+.decenary .card-content {
+    background-color: var(--color-decenary);
+    color: black;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.decenary .btn {
+    color: black;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .card-acervo {
+        width: 90%;
+        height: auto;
+    }
+
+    .card-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-acervo {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-content {
+        width: 100%;
+    }
+}

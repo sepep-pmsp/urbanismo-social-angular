@@ -8,6 +8,7 @@ import { TerritoriosPageComponent } from './components/pages/territorios/territo
 import { TerritorioPageComponent } from './components/pages/territorio/territorio-page/territorio-page.component';
 import { NewsComponent } from './components/pages/news/news/news.component';
 import { NewsPageComponent } from './components/pages/news/news-page/news-page.component';
+import { AcervoComponent } from './components/pages/eventos/acervo/acervo.component';
 
 export const routes: Routes = [
     { path: '' , component: HomePageComponent },
@@ -18,5 +19,6 @@ export const routes: Routes = [
     { path: 'territorio/:url', component: TerritorioPageComponent, data: { prerender: false } },
     { path: 'noticias', component: NewsComponent },
     { path: 'news/:url', component: NewsPageComponent },
+    { path: 'eventos', component: AcervoComponent },
     { path: '**', pathMatch: 'full', component: NotFoundComponent },
 ];
