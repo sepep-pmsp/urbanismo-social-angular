@@ -1,0 +1,34 @@
+<div class="__page_acervo__">
+    <div>
+        <div class="sticky-container">
+            <app-sticky-hold [isHomePage]="false"></app-sticky-hold>
+        </div>
+    </div>
+
+    <div class="_body_acervo_">
+        <div class="title-acervo">
+            <h1 class="_title_">acervo de eventos</h1>
+        </div>
+    </div>
+
+    <div class="body-card-acervo">
+        <div class="card-acervo" *ngFor="let acervo of acervoList; let i = index"
+            [ngClass]="{'quinary': i % 3 === 0, 'octonary': i % 3 === 1, 'decenary': i % 3 === 2}">
+
+            <a *ngIf="acervo.link" [href]="acervo.link" target="_blank">
+                <div class="img_background" [ngStyle]="{'background-image': 'url(' + acervo.img + ')'}"></div>
+            </a>
+
+            <div class="card-content">
+                <div>
+                    <h2 class="card-title">{{ acervo.title }}</h2>
+                    <p class="date">{{ acervo.date }}</p>
+                    <p class="time">{{ acervo.time }}</p>
+                </div>
+                <div>
+                    <p class="description">{{ acervo.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
