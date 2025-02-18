@@ -26,4 +26,4 @@ RUN ng build
 
 FROM nginx:1.26-alpine
 
-COPY --from=build /usr/src/app/dist/codata/browser /usr/share/nginx/html
+COPY --from=build /usr/src/app/dist/codata/urbanismo-social-angular/browser /usr/share/nginx/html
