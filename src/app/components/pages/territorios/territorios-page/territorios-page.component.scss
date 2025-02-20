@@ -7,11 +7,11 @@
     gap: 10rem;
 }
 
-p{
+p {
     line-height: 52px;
 }
 
-.images_territorios_{
+.images_territorios_ {
     padding: 4rem 1rem;
     display: flex;
     justify-content: center;
@@ -58,16 +58,62 @@ p{
     word-break: break-word;
     text-decoration: none;
 }
-._txt_content_{
+._txt_content_ {
     width: 21rem;
     word-break: break-word;
 }
 
-._img_and_txt_{
+._img_and_txt_ {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     gap: 2rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    ._sticky_{
+        display: none;
+    }
+
+    .__apresentacao__content__paragrafo_1 {
+        font-size: 30px;
+        margin: 0;
+        padding: 2rem;
+        text-align: justify;
+    }
+    ._img_and_txt_ {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        width: 10rem;
+    }
+
+    ._txt_territorios{
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #000;
+        word-break: break-word;
+        text-decoration: none;
+        width: 13rem;
+    }
+
+    .images_territorios_ {
+        padding: 1rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    ._img_card_ {
+        width: 8rem;
+    }
 }
