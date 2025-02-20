@@ -93,14 +93,21 @@ p {
   .__navigation__ {
     display: none;
   }
-  .__menu__mobile__ {
+  .__menu__mobile__.home-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 67rem;
-    left: 9rem;
+    left: 1rem;
+  }
+
+  .__menu__mobile__ {
+    position: absolute;
+    top: 53px;
+    left: 8rem;
+    width: 100%;
   }
 
   ._btn_menu_ {
