@@ -1,23 +1,45 @@
 <div class="carousel-container">
-    <div class="carousel-wrapper" #carousel>
-      <div class="carousel-item" *ngFor="let news of newsList">
-        <div class="img_card">
-          <img class="card_img" [src]="news.img" alt="{{ news.title }}">
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <ng-template #externalLink>
-              <a [href]="news.link" target="_blank" class="btn">
-                <h5 class="card-title">{{ news.title }}</h5>
-              </a>
-            </ng-template>
-            <p class="date">{{ news.date }}</p>
-            <a *ngIf="news.url; else externalLink" [routerLink]="['/news', news.url]" class="btn">
+  <div class="carousel-wrapper" #carousel>
+    <div class="carousel-item" *ngFor="let news of newsList">
+      <div class="img_card">
+        <img class="card_img" [src]="news.img" alt="{{ news.title }}">
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <ng-template #externalLink>
+            <a [href]="news.link" target="_blank" class="btn">
               <h5 class="card-title">{{ news.title }}</h5>
             </a>
-          </div>
+          </ng-template>
+          <p class="date">{{ news.date }}</p>
+          <a *ngIf="news.url; else externalLink" [routerLink]="['/news', news.url]" class="btn">
+            <h5 class="card-title">{{ news.title }}</h5>
+          </a>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
+
+<div class="carousel-container-mobile">
+  <div class="carousel-wrapper-mobile" #carousel>
+    <div class="carousel-item-mobile" *ngFor="let news of newsList">
+      <div class="img_card-mobile">
+        <img class="card_img-mobile" [src]="news.img" alt="{{ news.title }}">
+      </div>
+      <div class="card-mobile">
+        <div class="card-body-mobile">
+          <ng-template #externalLink>
+            <a [href]="news.link" target="_blank" class="btn-mobile">
+              <h5 class="card-title-mobile">{{ news.title }}</h5>
+            </a>
+          </ng-template>
+          <p class="date-mobile">{{ news.date }}</p>
+          <a *ngIf="news.url; else externalLink" [routerLink]="['/news', news.url]" class="btn-mobile">
+            <h5 class="card-title-mobile">{{ news.title }}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
