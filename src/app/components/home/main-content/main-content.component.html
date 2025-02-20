@@ -1,6 +1,12 @@
 <div class="__main__">
+    <div>
+        <app-navi-mobile [isHomePage]="true"></app-navi-mobile>
+    </div>
     <div class="__content__" *ngFor="let block of blocks;">
         <div class="block_ _01">
+            <div class="_01Mobile">
+                <div class="_02Mobile"></div>
+            </div>
             <div class="_block_">
                 <h2 class="_paragraph_prog_txt">{{ block.title }}</h2>
             </div>
@@ -11,22 +17,25 @@
     </div>
     <div class="__content__0" *ngFor="let blockss of block;">
         <div class="block_ _02">
+            <div class="_03Mobile">
+                <div class="_04Mobile"></div>
+            </div>
             <div class="_block_ _1">
                 <h2 class="_paragraph_prog_txt">{{ blockss.title }}</h2>
             </div>
         </div>
         <div class="txt_block_ _02">
-            <p class="_paragraph_prog_txt_0">{{ blockss.text }}</p>
+            <p class="_paragraph_prog_txt_0 mobile_txt">{{ blockss.text }}</p>
         </div>
     </div>
     <div class="__main_img_territories__">
         <div class="img_sp">
-            <img src="assets/territorios/territorios_sp.svg" alt="territories">
+            <img class="img-desktop img-mobile" src="assets/territorios/territorios_sp.svg" alt="territories">
         </div>
         <div class="territorios_sp">
             <div class="tooltip-container">
                 <a [routerLink]="'/territorios'">
-                    <button class="btn_territory">
+                    <button class="btn_territory btn_territory_mobile">
                         <span class="txt">os territórios</span>
                     </button>
                 </a>
@@ -49,6 +58,9 @@
             </div>
         </div>
     </div>
+     <div>
+        <app-carrossel></app-carrossel>
+    </div>
     <!-- <div class="__main_parceiros__">
         <div class="_txt_">
             <span>
@@ -70,7 +82,4 @@
             </a>
         </div>
     </div> -->
-    <div>
-        <app-carrossel></app-carrossel>
-    </div>
 </div>

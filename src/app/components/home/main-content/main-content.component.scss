@@ -3,97 +3,97 @@
 }
 $animationSpeed: 40s;
 
-p{
+p {
   line-height: 52px;
 }
 
-.__main__{
-    padding: 17rem 0 0 0;
-    margin: 3.5rem;
+.__main__ {
+  padding: 17rem 0 0 0;
+  margin: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+}
+
+.__content__ {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.__content__0 {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.block_ {
+  width: 50rem;
+  height: 50rem;
+  border-radius: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  &._01 {
+    background-color: var(--color-tertiary);
+  }
+  &._02 {
+    background-color: var(--color-secondary);
+  }
+
+  ._block_ {
+    width: 37rem;
+    height: 37rem;
+    background-color: var(--color-primary);
+    border-radius: 12rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 15rem;
-}
+    transition: all 0.3s linear;
 
-.__content__{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10rem;
-}
-
-.__content__0{
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10rem;
-}
-
-.block_{
-    width: 50rem;
-    height: 50rem;
-    border-radius: 16rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    &._01{
-        background-color: var(--color-tertiary);
+    &:hover {
+      background-color: var(--color-tertiary);
+      transition: all 0.3s linear;
     }
-    &._02{
-        background-color: var(--color-secondary);
-    }
+  }
 
-    ._block_{
-        width: 37rem;
-        height: 37rem;    
-        background-color: var(--color-primary);
-        border-radius: 12rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        transition: all .3s linear;
+  ._1:hover {
+    background-color: var(--color-secondary);
+    transition: all 0.3s linear;
+  }
 
-        &:hover{
-            background-color: var(--color-tertiary);
-            transition: all .3s linear;
-        }
-    }
-
-    ._1:hover{
-        background-color: var(--color-secondary);
-        transition: all .3s linear;
-    }
-
-    ._paragraph_prog_txt{
-        font-size: 7.5rem;
-        font-weight: bold;
-    }
-}
-
-._paragraph_prog_txt_0{
-    font-size: 2.66rem;
+  ._paragraph_prog_txt {
+    font-size: 7.5rem;
     font-weight: bold;
-    width: 45rem;
+  }
 }
 
-.__main_img_territories__{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    gap: 17rem;
+._paragraph_prog_txt_0 {
+  font-size: 2.66rem;
+  font-weight: bold;
+  width: 45rem;
+}
+
+.__main_img_territories__ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 17rem;
 }
 
 .territorios_sp {
@@ -125,7 +125,9 @@ p{
       position: absolute;
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
       width: 5rem;
       height: 5rem;
       background: white;
@@ -134,8 +136,8 @@ p{
       align-items: center;
       justify-content: center;
 
-      .img_territory{
-       width: 14rem;
+      .img_territory {
+        width: 14rem;
       }
     }
 
@@ -180,14 +182,13 @@ p{
   }
 }
 
-
-._txt_{
+._txt_ {
   font-size: 7rem;
   font-weight: bold;
   padding-right: 43rem;
 }
 
-.__main_parceiros__{
+.__main_parceiros__ {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -208,7 +209,7 @@ p{
   &::before,
   &::after {
     @include white-gradient;
-    content: '';
+    content: "";
     height: 100px;
     position: absolute;
     width: 200px;
@@ -246,7 +247,7 @@ p{
   }
 }
 
-.btn_parceiros{
+.btn_parceiros {
   border: none;
   background-color: var(--color-quaternary);
   border-radius: 3rem;
@@ -257,40 +258,186 @@ p{
   font-weight: bold;
 }
 
-@media screen and (min-width: 320px) and (max-width: 425px){
-    .__main__{
-      padding: 10rem 0 0 0;
-      margin: 1rem;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center;
-      gap: 5rem;
-    }
-    .block_{
-      position: relative;
-      left: 12rem;
-      width: 18rem;
-      height: 14rem;
-      border-radius: 16rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      background-color: var(--color-tertiary);
+@media screen and (min-width: 320px) and (max-width: 425px) {
+  .__main__ {
+    padding: 3rem 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 1rem;
+  }
 
-      ._block_{
-        width: 13rem;
-        height: 10rem;
+  .__content__ {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .__content__0 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .block_ {
+    width: 13rem;
+    height: 9rem;
+    border-radius: 16rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    &._01 {
+      background-color: transparent;
+    }
+    &._02 {
+      background-color: transparent;
+    }
+
+    ._block_ {
+      width: 20rem;
+      height: 37rem;
+      background-color: transparent;
+      border-radius: 12rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      transition: all 0.3s linear;
+    }
+
+    ._paragraph_prog_txt {
+      font-size: 3em;
+      font-weight: bold;
+      height: 4rem;
+    }
+  }
+
+  ._paragraph_prog_txt_0 {
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 20rem;
+    line-height: 35px;
+  }
+
+  .__main_img_territories__ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 17rem;
+  }
+
+  ._01Mobile {
+    background: var(--color-tertiary);
+    width: 13rem;
+    height: 28rem;
+    position: absolute;
+    left: 11.33rem;
+    top: 75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -3;
+    border-top-left-radius: 8rem;
+    border-bottom-left-radius: 8rem;
+  }
+  ._02Mobile {
+    background: var(--color-primary);
+    width: 10rem;
+    height: 23rem;
+    position: absolute;
+    left: 3rem;
+    z-index: -2;
+    border-top-left-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+  }
+  ._03Mobile {
+    background: var(--color-octonary);
+    width: 15rem;
+    height: 28rem;
+    position: absolute;
+    right: 9.44rem;
+    top: 131rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -3;
+    border-top-right-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+  }
+  ._04Mobile {
+    background: var(--color-primary);
+    width: 12rem;
+    height: 23rem;
+    position: absolute;
+    left: 0rem;
+    z-index: -2;
+    border-top-right-radius: 6rem;
+    border-bottom-right-radius: 6rem;
+  }
+
+  .mobile_txt {
+    text-align: end;
+  }
+
+  .__main_img_territories__ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 0;
+    width: 22rem;
+  }
+
+  .img-mobile {
+    width: 21rem;
+  }
+
+  .territorios_sp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+
+      .btn_territory {
+        border: none;
+        background-color: var(--color-quinary);
+        width: 20rem;
+        height: 5rem;
+        border-radius: 7rem;
+        color: var(--color-primary);
+        font-size: 2rem;
+        font-weight: 700;
+        z-index: 2;
+        cursor: pointer;
+        position: relative;
       }
 
-      ._paragraph_prog_txt{
-        font-size: 1.5rem;
-        font-weight: bold;
-        position: relative;
-        right: 12rem;
+      .tooltip {
+        display: none;
+        .img_territory {
+          width: 0rem;
+        }
+      }
     }
   }
 }
