@@ -3,7 +3,7 @@
     margin: 1rem;
 }
 
-p{
+p {
     line-height: 52px;
 }
 
@@ -361,5 +361,94 @@ p{
         &:hover {
             background-color: rgba(0, 0, 0, 0.8);
         }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    ._sticky_ {
+        display: none;
+    }
+
+    .__territorio__ {
+        width: 26rem;
+    }
+
+    .__territorio__page___ {
+        padding: 2rem 0.5rem 0.5rem;
+    }
+
+    .__page___ {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 10rem 0 0 0;
+
+        .txt_inicial {
+            width: 20rem;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 5rem;
+        }
+    }
+
+    .img_inicial {
+        width: 20rem;
+    }
+
+    ._image_inicial {
+        width: 20rem;
+    }
+
+    .title_inicial {
+        font-weight: 700;
+        font-size: 5rem;
+        width: 20rem;
+        height: 23rem;
+    }
+
+    .txt-p {
+        font-size: 18px;
+        width: 17rem;
+        text-align: justify;
+        padding: 1px 0;
+
+        &.txt2 {
+            width: 17rem;
+        }
+
+        &.list-txt {
+            width: 17rem;
+            padding: 0 0 0 2rem;
+        }
+    }
+
+    .ancora {
+        font-size: 20px;
+        font-weight: bold;
+        padding: 1rem 0;
+    }
+
+    .list-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
+    }
+
+    .img_inicial {
+        width: 20rem;
+        position: absolute;
+        top: 20rem;
+        z-index: -1;
+        left: 4.55rem;
     }
 }

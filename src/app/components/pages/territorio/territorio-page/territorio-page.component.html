@@ -1,5 +1,5 @@
 <div class="__territorio__">
-  <div>
+  <div class="_sticky_">
     <app-sticky-hold [isHomePage]="false"></app-sticky-hold>
   </div>
   <div class="__territorio__page___">
@@ -22,7 +22,7 @@
             <p class="txt-p txt2">{{ territorio.texto_2 }}</p>
             <div class="_list_equipe_" *ngIf="territorio && territorio.equipe">
               <h2 class="ancora">{{ territorio.funcao }}</h2>
-              <ul *ngFor="let membro of territorio.equipe">
+              <ul *ngFor="let membro of territorio.equipe" class="list-mobile">
                 <li class="txt-p txt-list">{{ membro.equipe_txt }}</li>
                 <li class="txt-p txt-list">{{ membro.nome }}</li>
                 <li class="txt-p txt-list">{{ membro.endereco }}</li>
@@ -129,6 +129,5 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
