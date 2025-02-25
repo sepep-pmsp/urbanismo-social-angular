@@ -369,12 +369,18 @@ p {
         display: none;
     }
 
+    ._carrossel_territorios_atividades_ {
+        gap: 0;
+    }
+
     .__territorio__ {
-        width: 26rem;
+        width: 22rem;
+        height: 415rem;
     }
 
     .__territorio__page___ {
-        padding: 2rem 0.5rem 0.5rem;
+        padding: 0;
+        margin: 0;
     }
 
     .__page___ {
@@ -396,10 +402,6 @@ p {
             align-items: flex-start;
             gap: 5rem;
         }
-    }
-
-    .img_inicial {
-        width: 20rem;
     }
 
     ._image_inicial {
@@ -430,9 +432,9 @@ p {
     }
 
     .ancora {
-        font-size: 20px;
-        font-weight: bold;
         padding: 1rem 0;
+        font-size: 20px;
+        font-weight: 400;
     }
 
     .list-mobile {
@@ -445,10 +447,184 @@ p {
     }
 
     .img_inicial {
-        width: 20rem;
+        width: 17rem;
         position: absolute;
-        top: 20rem;
+        top: 21rem;
         z-index: -1;
-        left: 4.55rem;
+        left: 0.55rem;
+    }
+
+    .txt-maps {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        right: 0;
+    }
+
+    .apresentacao {
+        font-size: 2rem;
+    }
+
+    .carousel-container {
+        width: 90%;
+    }
+
+    .carousel-containe {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .carousel-containe::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel {
+        display: flex;
+        transition: none;
+    }
+
+    .carrossel-mobile {
+        display: flex;
+        transition: none;
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+    }
+
+    .img-carrosel-1 {
+        max-width: 90%;
+    }
+
+    .control {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+
+    ._txt_ {
+        font-size: 17px;
+    }
+
+    .title-territorio,
+    .title-atividades {
+        font-size: 2rem;
+        padding: 2px;
+        font-weight: 400;
+    }
+
+    .carousel_title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .carousel__slide,
+    .carousel__slide__figure_atividades {
+        display: flex;
+        margin: 0;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        width: 20rem;
+    }
+
+    @mixin aspect-ratio($width, $height) {
+        position: relative;
+
+        &:before {
+            display: block;
+            content: "";
+            width: 50%;
+            padding-top: calc($height / $width) * 50%;
+        }
+
+        > img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+    .carousel__slide__atividades__div {
+        width: 70%;
+    }
+
+    .container {
+        max-width: 23rem;
+        margin: 0 auto;
+        padding: 0;
+        height: 37rem;
+    }
+
+    .carousel__slide .carousel__slide__figcaption {
+        padding: 20px 20px 0;
+        flex: 0 0 auto;
+        width: 35%;
+        min-width: 277px;
+    }
+
+    .carousel__thumbnails {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .carousel__thumbnails .carousel__thumbnails__li_atividades {
+        flex: 1 1 auto;
+        max-width: calc(15.666667% - 25px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .carousel__thumbnails_mobile {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0;
+        justify-content: center;
+        width: 22rem;
+        padding: 0;
+        margin: 0;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .carousel__thumbnails__li_atividades {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    .carousel__thumbnails__label_atividades {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .img_atividades_id {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    .carousel__thumbnails__li_mobile {
+        max-width: calc(50.666667% - -37px) !important;
     }
 }

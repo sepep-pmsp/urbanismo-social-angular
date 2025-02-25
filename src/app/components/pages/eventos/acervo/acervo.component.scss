@@ -122,24 +122,81 @@
     background: rgba(255, 255, 255, 0.4);
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .sticky-container {
+        display: none;
+    }
+
+    ._title_ {
+        font-size: 5rem; // Reduz tamanho do título
+        right: 0;
+        text-align: center;
+    }
+
+    .body-card-acervo {
+        flex-direction: column;
+        width: 100%;
+        gap: 1.5rem;
+        padding: 0;
+        margin: 0;
+    }
+
     .card-acervo {
-        width: 90%;
-        height: auto;
+        width: 84%;
+        flex-direction: column;
+        height: 24rem;
+        align-items: start;
+        justify-content: flex-end;
+        padding: 13px;
+    }
+
+    .img_background {
+        width: 94%;
+        height: 50rem;
+        background-size: contain;
+        border-radius: 1.5rem;
     }
 
     .card-content {
-        width: 80%;
-    }
-}
+        margin: 0;
+        padding: 0.5rem;
+        width: 18rem;
+        max-height: 15rem; // Limita a altura do conteúdo
+        overflow-y: auto; // Adiciona scroll vertical se necessário
+        scrollbar-width: thin; // Para navegadores que suportam
+        scrollbar-color: var(--primary) transparent; // Ajusta cor da barra de rolagem
 
-@media (max-width: 480px) {
-    .card-acervo {
-        width: 100%;
-        height: auto;
+        &::-webkit-scrollbar {
+            width: 5px; // Ajusta largura da barra de rolagem no Chrome/Safari
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
     }
 
-    .card-content {
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .date,
+    .time {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .btn {
         width: 100%;
+        padding: 8px;
+        font-size: 1.4rem;
     }
 }

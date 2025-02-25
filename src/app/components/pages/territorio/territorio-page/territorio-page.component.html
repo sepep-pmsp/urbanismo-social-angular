@@ -63,7 +63,7 @@
               <div class="carousel_title">
                 <p class="title-territorio">Imagens do território</p>
               </div>
-              <div class="carousel">
+              <div class="carousel carrossel-mobile">
                 <input *ngFor="let slide of territorio.carrossel_territorios; let i = index" type="radio"
                   name="slides-territorios" [checked]="i === 0" [id]="'slide-territorios' + (firstVisibleIndex + i)"
                   class="input_atividades">
@@ -99,7 +99,7 @@
               <div class="carousel_title">
                 <p class="title-atividades">Atividades no Território</p>
               </div>
-              <div class="carousel">
+              <div class="carousel carrossel-mobile atividades-mobile">
                 <input *ngFor="let slide of paginatedSlides; let i = index" type="radio" name="slides-atividades"
                   [checked]="i === 0" [id]="'slide-atividades' + (firstVisibleIndex + i)" class="input_atividades">
                 <ul class="carousel__slides">
@@ -115,8 +115,8 @@
                     </figure>
                   </li>
                 </ul>
-                <ul class="carousel__thumbnails">
-                  <li *ngFor="let slide of paginatedSlides; let i = index" class="carousel__thumbnails__li_atividades">
+                <ul class="carousel__thumbnails carousel__thumbnails_mobile">
+                  <li *ngFor="let slide of paginatedSlides; let i = index" class="carousel__thumbnails__li_atividades carousel__thumbnails__li_mobile">
                     <label [for]="'slide-atividades' + (firstVisibleIndex + i)"
                       class="carousel__thumbnails__label_atividades">
                       <img [src]="slide.img" alt="Thumbnail {{ firstVisibleIndex + i }}" class="img_atividades_id">
