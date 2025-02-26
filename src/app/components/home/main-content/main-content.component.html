@@ -1,7 +1,4 @@
 <div class="__main__">
-    <div>
-        <app-navi-mobile [isHomePage]="true"></app-navi-mobile>
-    </div>
     <div class="__content__" *ngFor="let block of blocks;">
         <div class="block_ _01">
             <div class="_01Mobile">
@@ -34,7 +31,7 @@
         </div>
         <div class="territorios_sp">
             <div class="tooltip-container">
-                <a [routerLink]="'/territorios'">
+                <a href="#/territorios">
                     <button class="btn_territory btn_territory_mobile">
                         <span class="txt">os territórios</span>
                     </button>

@@ -40,7 +40,7 @@ export class AboutComponent {
     this.video = [
       {
         title: 'vídeo institucional',
-        video: this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/s9Jw5XrDdy8?si=yJKbj8Qk-APQJrEN'),
+        video: this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube-nocookie.com/embed/s9Jw5XrDdy8?si=yJKbj8Qk-APQJrEN'),
         type: 'video/youtube'
       }
     ];

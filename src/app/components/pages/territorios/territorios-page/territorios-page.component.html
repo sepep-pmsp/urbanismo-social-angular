@@ -1,5 +1,5 @@
 <div class="__territorios__">
-  <div>
+  <div class="_sticky_">
     <app-sticky-hold [isHomePage]="false"></app-sticky-hold>
   </div>
   <div class="__our_territorios__">
@@ -20,7 +20,7 @@
         <div>
           <a [routerLink]="['/territorio', territorio.url]">
             <img [src]="[images[0].img_pink, images[0].img_orange, images[0].img_blue, images[0].img_yellow][i]"
-              [alt]="'Imagem do ' + territorio.title" class="_img_" />
+              [alt]="'Imagem do ' + territorio.title" class="_img_card_" />
           </a>
         </div>
         <div class="_txt_content_">
