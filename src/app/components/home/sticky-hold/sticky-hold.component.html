@@ -1,6 +1,6 @@
 <div class="__sticky__" [ngClass]="{ 'sticky-active': isStickyActive }">
   <div class="__sticky__content">
-    <a [routerLink]="''">
+    <a (click)="handleClick()">
       <img class="__sticky__image" [src]="img_sticky" alt="Sticky Logo" />
     </a>
   </div>
