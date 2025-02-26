@@ -2,10 +2,11 @@ import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CarrosselComponent } from "../carrossel/carrossel.component";
+import { NaviMobileComponent } from "../navi-mobile/navi-mobile.component";
 
 @Component({
   selector: 'app-main-content',
-  imports: [NgFor, RouterModule, CarrosselComponent],
+  imports: [NgFor, RouterModule, CarrosselComponent, NaviMobileComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
