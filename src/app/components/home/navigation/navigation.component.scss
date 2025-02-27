@@ -2,8 +2,8 @@
   flex-direction: column;
   flex-wrap: nowrap;
   position: fixed;
-  top: 66%;
-  left: 98%;
+  top: 85%;
+  left: 92%;
   transform: translate(-50%, -50%);
   z-index: 7;
   display: flex;
@@ -25,6 +25,9 @@ p {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  z-index: 9;
+    width: 20rem;
+    height: 20rem;
 
   ._list_navigation_ {
     position: absolute;
@@ -38,6 +41,7 @@ p {
     color: white;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
+    z-index: 9;
 
     &._s_ {
       background-color: #f16532;
@@ -93,21 +97,14 @@ p {
   .__navigation__ {
     display: none;
   }
-  .__menu__mobile__.home-page {
+  .__menu__mobile__ {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 67rem;
-    left: 1rem;
-  }
-
-  .__menu__mobile__ {
-    position: absolute;
-    top: 53px;
-    left: 8rem;
-    width: 100%;
+    left: 9rem;
   }
 
   ._btn_menu_ {
