@@ -332,7 +332,7 @@ p {
     }
 
     .section-content {
-        font-size: 18px; // Reduz tamanho da fonte para melhor adaptação
+        font-size: 18px;
         width: 90%;
         text-align: justify;
     }
@@ -353,7 +353,7 @@ p {
     }
 
     .section-2 {
-        width: 18rem;
+        width: 23rem;
     }
 
     .law-title {
@@ -489,12 +489,12 @@ p {
         background-color: var(--color-secondary);
         width: 19rem;
         height: 19rem;
-        border-radius: 9rem;
+        border-radius: 6rem;
         .box-coordination-color-2 {
             width: 14rem;
             height: 14rem;
             background-color: var(--color-primary);
-            border-radius: 6rem;
+            border-radius: 4rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -510,5 +510,9 @@ p {
 
     .coordination-txt-2{
         padding: 0;
+    }
+
+    .partners-title{
+        width: 15rem !important;
     }
 }
