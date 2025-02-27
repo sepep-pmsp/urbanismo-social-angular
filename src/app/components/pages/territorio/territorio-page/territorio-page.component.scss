@@ -477,6 +477,10 @@ p {
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
         -ms-overflow-style: none;
+        position: relative;
+        width: 104%;
+        max-width: 124rem;
+        border-radius: 10px;
     }
 
     .carousel-containe::-webkit-scrollbar {
