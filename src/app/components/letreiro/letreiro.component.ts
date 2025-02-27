@@ -10,4 +10,5 @@ import { Component, Input } from '@angular/core';
 export class LetreiroComponent {
   repeatCount = 40;
   @Input() titulo: string = '';
+  arrayRepeat = Array.from({ length: this.repeatCount });
 }
