@@ -18,7 +18,7 @@
   </ul>
 </div>
 <div class="__menu__mobile__" *ngIf="isMobile">
-  <button class="_btn_menu_" (click)="toggleMenu()">menu</button>
+  <button class="_btn_menu_" (click)="toggleMenu()" [ngClass]="{'home-page-menu': isHomePage, 'default-menu': !isHomePage}">menu</button>
   <div class="menu_list_mobile" *ngIf="isMenuOpen">
     <ul class="mobile-menu">
       <li class="list-mobile _i_" (click)="closeMenu()"><a [routerLink]="'/'">Início</a></li>
