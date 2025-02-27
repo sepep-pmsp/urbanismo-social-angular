@@ -19,15 +19,15 @@
 </div>
 <div class="__menu__mobile__" *ngIf="isMobile">
   <button class="_btn_menu_" (click)="toggleMenu()">menu</button>
-  <div class="menu_list_mobile" *ngIf="menuOpen">
-      <ul class="mobile-menu">
-          <li class="list-mobile _i_"><a [routerLink]="'/'">Início</a></li>
-          <li class="list-mobile _s_"><a [routerLink]="'/sobre-nos'">Sobre</a></li>
-          <li class="list-mobile _t_"><a [routerLink]="'/territorios'">Territórios</a></li>
-          <li class="list-mobile _e_"><a [routerLink]="'/eventos'">Eventos</a></li>
-          <li class="list-mobile _n_"><a [routerLink]="'/noticias'">Notícias</a></li>
-          <li class="list-mobile _g_"><a [routerLink]="'/governanca'">Governança</a></li>
-          <li class="list-mobile _exit_" (click)="toggleMenu()">Sair</li>
-      </ul>
+  <div class="menu_list_mobile" *ngIf="isMenuOpen">
+    <ul class="mobile-menu">
+      <li class="list-mobile _i_" (click)="closeMenu()"><a [routerLink]="'/'">Início</a></li>
+      <li class="list-mobile _s_" (click)="closeMenu()"><a [routerLink]="'/sobre-nos'">Sobre</a></li>
+      <li class="list-mobile _t_" (click)="closeMenu()"><a [routerLink]="'/territorios'">Territórios</a></li>
+      <li class="list-mobile _e_" (click)="closeMenu()"><a [routerLink]="'/eventos'">Eventos</a></li>
+      <li class="list-mobile _n_" (click)="closeMenu()"><a [routerLink]="'/noticias'">Notícias</a></li>
+      <li class="list-mobile _g_" (click)="closeMenu()"><a [routerLink]="'/governanca'">Governança</a></li>
+      <li class="list-mobile _exit_" (click)="closeMenu()">Sair</li>
+    </ul>
   </div>
 </div>
