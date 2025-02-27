@@ -43,10 +43,24 @@ export class NavigationComponent implements OnInit {
 
   private updateMenuVisibility(): void {
     if (this.window) {
-      this.isMobile = this.window.innerWidth <= 768;
+      this.isMobile = this.window.innerWidth <= 425;
     }
   }
 
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  private updateMenuVisibility(): void {
+    if (this.window) {
+      this.isMobile = this.window.innerWidth <= 768;
+    }
+  }
+  
   @HostListener('window:resize')
   onResize(): void {
     this.updateMenuVisibility();
