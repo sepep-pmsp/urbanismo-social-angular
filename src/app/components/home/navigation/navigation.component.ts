@@ -1,7 +1,8 @@
 import { NgIf } from '@angular/common';
 import { Component, HostListener, Inject, Input, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { NavigationEnd, RouterModule } from '@angular/router';
 import { WINDOW } from '../../tokens/window.token';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
@@ -13,16 +14,36 @@ export class NavigationComponent implements OnInit {
   menuOpen: boolean = false;
   isMobile: boolean = false;
   isMenuActive = false;
+  isMenuOpen: boolean = false;
 
   private MenuPoint: number = 0;
 
   constructor(
-    @Inject(WINDOW) private window: Window | null
+    @Inject(WINDOW) private window: Window | null,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.updateMenuVisibility();
-    setTimeout(() => this.updateMenuVisibility(), 0);
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.closeMenu();
+      }
+    });
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  private updateMenuVisibility(): void {
+    if (this.window) {
+      this.isMobile = this.window.innerWidth <= 425;
+    }
   }
 
   @HostListener('window:resize', [])
@@ -36,16 +57,6 @@ export class NavigationComponent implements OnInit {
   onScroll(): void {
     if (this.window) {
       this.isMenuActive = this.window.scrollY >= this.MenuPoint;
-    }
-  }
-
-  toggleMenu(): void {
-    this.menuOpen = !this.menuOpen;
-  }
-
-  private updateMenuVisibility(): void {
-    if (this.window) {
-      this.isMobile = this.window.innerWidth <= 425;
     }
   }
 }
