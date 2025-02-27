@@ -375,7 +375,7 @@ p {
 
     .__territorio__ {
         width: 27rem;
-        height: 415rem;
+        height: 435rem;
     }
 
     .__territorio__page___ {
@@ -482,7 +482,6 @@ p {
         max-width: 124rem;
         border-radius: 10px;
     }
-
     .carousel-containe::-webkit-scrollbar {
         display: none;
     }
@@ -508,8 +507,9 @@ p {
     }
 
     .control {
-        font-size: 1.5rem;
-        padding: 5px;
+        font-size:0;
+        padding: 0;
+        display: none !important;
     }
 
     ._txt_ {
