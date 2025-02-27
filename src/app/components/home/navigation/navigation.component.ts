@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component, HostListener, Inject, Input, OnInit } from '@angular/core';
 import { NavigationEnd, RouterModule } from '@angular/router';
 import { WINDOW } from '../../tokens/window.token';
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
-  imports: [NgIf, RouterModule],
+  imports: [NgIf, RouterModule,NgClass],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
 })
@@ -15,6 +15,7 @@ export class NavigationComponent implements OnInit {
   isMobile: boolean = false;
   isMenuActive = false;
   isMenuOpen: boolean = false;
+  @Input() isHomePage: boolean = false;
 
   private MenuPoint: number = 0;
 
@@ -46,10 +47,25 @@ export class NavigationComponent implements OnInit {
     }
   }
 
-  @HostListener('window:resize', [])
-  onResize(): void {
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  private updateMenuVisibility(): void {
     if (this.window) {
-      this.updateMenuVisibility();
+      this.isMobile = this.window.innerWidth <= 768;
+    }
+  }
+  
+  @HostListener('window:resize')
+  onResize(): void {
+    this.updateMenuVisibility();
+    if (!this.isMobile && this.isMenuOpen) {
+      this.closeMenu();
     }
   }
 

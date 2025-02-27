@@ -13,8 +13,17 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'urbanismo-social-angular';
+  isHomePage: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router
+  ) {
+    this.router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        this.isHomePage = event.url === '/';
+      }
+    });
+  }
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
